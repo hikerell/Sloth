@@ -1,0 +1,158 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> RULE
+Rule 1     RULE -> RULENAME COLON RULENODES
+Rule 2     RULENAME -> ID
+Rule 3     RULENODES -> RULENODE
+Rule 4     RULENODES -> RULENODES RULENODE
+Rule 5     RULENODE -> TEXTNODE
+Rule 6     RULENODE -> NAMENODE
+Rule 7     TEXTNODE -> TEXT
+Rule 8     NAMENODE -> RULENAME
+
+Terminals, with rules where they appear
+
+COLON                : 1
+ID                   : 2
+TEXT                 : 7
+error                : 
+
+Nonterminals, with rules where they appear
+
+NAMENODE             : 6
+RULE                 : 0
+RULENAME             : 1 8
+RULENODE             : 3 4
+RULENODES            : 1 4
+TEXTNODE             : 5
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . RULE
+    (1) RULE -> . RULENAME COLON RULENODES
+    (2) RULENAME -> . ID
+
+    ID              shift and go to state 3
+
+    RULE                           shift and go to state 1
+    RULENAME                       shift and go to state 2
+
+state 1
+
+    (0) S' -> RULE .
+
+
+
+state 2
+
+    (1) RULE -> RULENAME . COLON RULENODES
+
+    COLON           shift and go to state 4
+
+
+state 3
+
+    (2) RULENAME -> ID .
+
+    COLON           reduce using rule 2 (RULENAME -> ID .)
+    TEXT            reduce using rule 2 (RULENAME -> ID .)
+    ID              reduce using rule 2 (RULENAME -> ID .)
+    $end            reduce using rule 2 (RULENAME -> ID .)
+
+
+state 4
+
+    (1) RULE -> RULENAME COLON . RULENODES
+    (3) RULENODES -> . RULENODE
+    (4) RULENODES -> . RULENODES RULENODE
+    (5) RULENODE -> . TEXTNODE
+    (6) RULENODE -> . NAMENODE
+    (7) TEXTNODE -> . TEXT
+    (8) NAMENODE -> . RULENAME
+    (2) RULENAME -> . ID
+
+    TEXT            shift and go to state 10
+    ID              shift and go to state 3
+
+    RULENAME                       shift and go to state 5
+    RULENODES                      shift and go to state 6
+    RULENODE                       shift and go to state 7
+    TEXTNODE                       shift and go to state 8
+    NAMENODE                       shift and go to state 9
+
+state 5
+
+    (8) NAMENODE -> RULENAME .
+
+    TEXT            reduce using rule 8 (NAMENODE -> RULENAME .)
+    ID              reduce using rule 8 (NAMENODE -> RULENAME .)
+    $end            reduce using rule 8 (NAMENODE -> RULENAME .)
+
+
+state 6
+
+    (1) RULE -> RULENAME COLON RULENODES .
+    (4) RULENODES -> RULENODES . RULENODE
+    (5) RULENODE -> . TEXTNODE
+    (6) RULENODE -> . NAMENODE
+    (7) TEXTNODE -> . TEXT
+    (8) NAMENODE -> . RULENAME
+    (2) RULENAME -> . ID
+
+    $end            reduce using rule 1 (RULE -> RULENAME COLON RULENODES .)
+    TEXT            shift and go to state 10
+    ID              shift and go to state 3
+
+    RULENAME                       shift and go to state 5
+    RULENODE                       shift and go to state 11
+    TEXTNODE                       shift and go to state 8
+    NAMENODE                       shift and go to state 9
+
+state 7
+
+    (3) RULENODES -> RULENODE .
+
+    TEXT            reduce using rule 3 (RULENODES -> RULENODE .)
+    ID              reduce using rule 3 (RULENODES -> RULENODE .)
+    $end            reduce using rule 3 (RULENODES -> RULENODE .)
+
+
+state 8
+
+    (5) RULENODE -> TEXTNODE .
+
+    TEXT            reduce using rule 5 (RULENODE -> TEXTNODE .)
+    ID              reduce using rule 5 (RULENODE -> TEXTNODE .)
+    $end            reduce using rule 5 (RULENODE -> TEXTNODE .)
+
+
+state 9
+
+    (6) RULENODE -> NAMENODE .
+
+    TEXT            reduce using rule 6 (RULENODE -> NAMENODE .)
+    ID              reduce using rule 6 (RULENODE -> NAMENODE .)
+    $end            reduce using rule 6 (RULENODE -> NAMENODE .)
+
+
+state 10
+
+    (7) TEXTNODE -> TEXT .
+
+    TEXT            reduce using rule 7 (TEXTNODE -> TEXT .)
+    ID              reduce using rule 7 (TEXTNODE -> TEXT .)
+    $end            reduce using rule 7 (TEXTNODE -> TEXT .)
+
+
+state 11
+
+    (4) RULENODES -> RULENODES RULENODE .
+
+    TEXT            reduce using rule 4 (RULENODES -> RULENODES RULENODE .)
+    ID              reduce using rule 4 (RULENODES -> RULENODES RULENODE .)
+    $end            reduce using rule 4 (RULENODES -> RULENODES RULENODE .)
+

@@ -1,0 +1,257 @@
+#12.2Primary Expression
+@PrimaryExpression(): this
+#@PrimaryExpression(): @IdentifierReference
+@PrimaryExpression(): $R()
+@PrimaryExpression(): @Literal
+@PrimaryExpression(): @ArrayLiteral
+@PrimaryExpression(): @ObjectLiteral
+@PrimaryExpression(): @FunctionExpression
+@PrimaryExpression(): @ClassExpression
+@PrimaryExpression(): @GeneratorExpression
+#@PrimaryExpression(): @AsyncFunctionExpression
+#@PrimaryExpression(): @AsyncGeneratorExpression
+#@PrimaryExpression(): @RegularExpressionLiteral
+#@PrimaryExpression(): @TemplateLiteral
+@PrimaryExpression(): @CoverParenthesizedExpressionAndArrowParameterList
+
+@CoverParenthesizedExpressionAndArrowParameterList(): (@Expression)
+@CoverParenthesizedExpressionAndArrowParameterList(): (@Expression,)
+@CoverParenthesizedExpressionAndArrowParameterList(): ()
+@CoverParenthesizedExpressionAndArrowParameterList(): (...@BindingIdentifier)
+@CoverParenthesizedExpressionAndArrowParameterList(): (...@BindingPattern)
+@CoverParenthesizedExpressionAndArrowParameterList(): (@Expression,...@BindingIdentifier)
+@CoverParenthesizedExpressionAndArrowParameterList(): (@Expression,...@BindingPattern)
+
+#12.2.4
+@Literal(): NullLiteral
+@Literal(): BooleanLiteral
+@Literal(): NumericLiteral
+@Literal(): StringLiteral
+
+#12.2.5 Array Initializer
+@ArrayLiteral(): []
+@ArrayLiteral(): [@Elision]
+@ArrayLiteral(): [@ElementList]
+@ArrayLiteral(): [@ElementList,]
+@ArrayLiteral(): [@ElementList, @Elision]
+
+@ElementList(): @AssignmentExpression
+@ElementList(): @Elision @AssignmentExpression
+@ElementList(): @SpreadElement
+@ElementList(): @Elision @SpreadElement
+@ElementList(): @ElementList, @AssignmentExpression
+@ElementList(): @ElementList, @Elision @AssignmentExpression
+@ElementList(): @ElementList, @SpreadElement
+@ElementList(): @ElementList, @Elision @SpreadElement
+
+@Elision(): ,
+@Elision(): @Elision,
+
+@SpreadElement(): ...@AssignmentExpression
+
+#12.2.6 Object Initializer
+@ObjectLiteral(): {}
+@ObjectLiteral(): {@PropertyDefinitionList}
+@ObjectLiteral(): {@PropertyDefinitionList,}
+
+@PropertyDefinitionList(): @PropertyDefinition
+@PropertyDefinitionList(): @PropertyDefinitionList, @PropertyDefinition
+
+@PropertyDefinition(): @IdentifierReference
+@PropertyDefinition(): @CoverInitializedName
+@PropertyDefinition(): @PropertyName: @AssignmentExpression
+@PropertyDefinition(): @MethodDefinition
+@PropertyDefinition(): ...@AssignmentExpression
+
+@PropertyName(): @LiteralPropertyName
+@PropertyName(): @ComputedPropertyName
+
+@LiteralPropertyName(): IdentifierName
+@LiteralPropertyName(): StringLiteral
+@LiteralPropertyName(): NumericLiteral
+
+@ComputedPropertyName(): [@AssignmentExpression]
+@CoverInitializedName(): IdentifierReference @Initializer
+@Initializer(): = @AssignmentExpression
+
+#14.1 Function Definitions
+@FunctionDeclaration(): function BindingIdentifier(@FormalParameters){@FunctionBody}
+@FunctionDeclaration(): function(@FormalParameters){@FunctionBody}
+
+@FunctionExpression(): function (@FormalParameters){@FunctionBody}
+@FunctionExpression(): function BindingIdentifier(@FormalParameters){@FunctionBody}
+
+@UniqueFormalParameters: @FormalParameters
+
+@FormalParameters(): $empty()
+@FormalParameters(): @FunctionRestParameter
+@FormalParameters(): @FormalParameterList
+@FormalParameters(): @FormalParameterList,
+@FormalParameters(): @FormalParameterList, @FunctionRestParameter
+
+@FormalParameterList(): @FormalParameter
+@FormalParameterList(): @FormalParameterList, @FormalParameter
+
+@FunctionRestParameter(): @BindingRestElement
+
+@FormalParameter(): @BindingElement
+
+@FunctionBody(): @FunctionStatementList
+
+@FunctionStatementList(): $empty()
+@FunctionStatementList(): @StatementList
+
+#14.4 Generator Function Definitions
+@GeneratorMethod(): *PropertyName(@UniqueFormalParameters){@GeneratorBody}
+
+@GeneratorDeclaration(): function * (@FormalParameters){@GeneratorBody}
+@GeneratorDeclaration(): function * BindingIdentifier(@FormalParameters){@GeneratorBody}
+
+@GeneratorExpression(): function * (@FormalParameters){@GeneratorBody}
+@GeneratorExpression(): function * BindingIdentifier(@FormalParameters){@GeneratorBody}
+
+@GeneratorBody(): @FunctionBody
+
+@YieldExpression(): yield
+@YieldExpression(): yield @AssignmentExpression
+@YieldExpression(): yield * @AssignmentExpression
+
+#14.6 Class Definitions
+@ClassDeclaration(): class BindingIdentifier @ClassTail
+@ClassDeclaration(): class @ClassTail
+
+@ClassExpression(): class @ClassTail
+@ClassExpression(): class BindingIdentifier @ClassTail
+
+@ClassTail(): {}
+@ClassTail(): {@ClassBody}
+@ClassTail(): @ClassHeritage{}
+@ClassTail(): @ClassHeritage{@ClassBody}
+
+@ClassHeritage(): extends @LeftHandSideExpression 
+
+@ClassBody(): @ClassElementList
+
+@ClassElementList(): @ClassElement 
+@ClassElementList(): @ClassElementList @ClassElement 
+
+@ClassElement(): @MethodDefinition 
+@ClassElement(): static @MethodDefinition 
+@ClassElement(): ;
+
+#See 14.7 for PrimaryExpression:AsyncFunctionExpression .
+#See 14.5 for PrimaryExpression:AsyncGeneratorExpression .
+
+#12.3 Left-Hand-Side Expressions
+@MemberExpression(): @PrimaryExpression
+@MemberExpression(): @MemberExpression [ @Expression ]
+@MemberExpression(): @MemberExpression.IdentifierName
+@MemberExpression(): @MemberExpression @TemplateLiteral
+@MemberExpression(): @SuperProperty
+@MemberExpression(): @MetaProperty
+@MemberExpression(): new @MemberExpression @Arguments
+
+@SuperProperty(): super[@Expression]
+@SuperProperty(): super.IdentifierName
+
+@MetaProperty(): @NewTarget
+
+@NewTarget(): new.target
+
+@NewExpression(): @MemberExpression
+@NewExpression(): new @NewExpression
+
+@CallExpression(): @CoverCallExpressionAndAsyncArrowHead
+@CallExpression(): @SuperCall
+@CallExpression(): @CallExpression @Arguments
+@CallExpression(): @CallExpression[@Expression]
+@CallExpression(): @CallExpression.IdentifierName
+@CallExpression(): @CallExpression @TemplateLiteral
+
+@SuperCall(): super @Arguments
+
+@Arguments(): ()
+@Arguments(): (@ArgumentList)
+@Arguments(): (@ArgumentList,)
+
+@ArgumentList(): @AssignmentExpression
+@ArgumentList(): ...@AssignmentExpression
+@ArgumentList(): @ArgumentList, @AssignmentExpression
+@ArgumentList(): @ArgumentList, ...@AssignmentExpression
+
+@LeftHandSideExpression(): @NewExpression
+@LeftHandSideExpression(): @CallExpression
+
+#12.4 - 12.15
+@UpdateExpression(): @LeftHandSideExpression 
+@UpdateExpression(): @LeftHandSideExpression ++
+@UpdateExpression(): @LeftHandSideExpression --
+@UpdateExpression(): ++ @UnaryExpression 
+@UpdateExpression(): -- @UnaryExpression 
+
+@UnaryExpression(): @UpdateExpression 
+@UnaryExpression(): delete @UnaryExpression 
+@UnaryExpression(): void @UnaryExpression 
+@UnaryExpression(): typeof @UnaryExpression 
+@UnaryExpression(): + @UnaryExpression 
+@UnaryExpression(): - @UnaryExpression 
+@UnaryExpression(): ~ @UnaryExpression 
+@UnaryExpression(): ! @UnaryExpression 
+@UnaryExpression(): @Expression
+
+@ExponentiationExpression(): @UnaryExpression 
+@ExponentiationExpression(): @UpdateExpression ** @ExponentiationExpression 
+
+@MultiplicativeExpression(): @ExponentiationExpression 
+@MultiplicativeExpression(): @MultiplicativeExpression @MultiplicativeOperator @ExponentiationExpression 
+
+@MultiplicativeOperator(): $OneOf(all="*,/,%")
+
+@AdditiveExpression(): @MultiplicativeExpression 
+@AdditiveExpression(): @AdditiveExpression + @MultiplicativeExpression 
+@AdditiveExpression(): @AdditiveExpression - @MultiplicativeExpression 
+
+@ShiftExpression(): @AdditiveExpression 
+@ShiftExpression(): @ShiftExpression << @AdditiveExpression 
+@ShiftExpression(): @ShiftExpression >> @AdditiveExpression 
+@ShiftExpression(): @ShiftExpression >>> @AdditiveExpression 
+
+@RelationalExpression(): @ShiftExpression 
+@RelationalExpression(): @RelationalExpression < @ShiftExpression 
+@RelationalExpression(): @RelationalExpression > @ShiftExpression 
+@RelationalExpression(): @RelationalExpression <= @ShiftExpression 
+@RelationalExpression(): @RelationalExpression >= @ShiftExpression 
+@RelationalExpression(): @RelationalExpression instanceof @ShiftExpression 
+@RelationalExpression(): @RelationalExpression in @ShiftExpression 
+
+@EqualityExpression(): @RelationalExpression 
+@EqualityExpression(): @EqualityExpression == @RelationalExpression 
+@EqualityExpression(): @EqualityExpression != @RelationalExpression 
+@EqualityExpression(): @EqualityExpression === @RelationalExpression 
+@EqualityExpression(): @EqualityExpression !== @RelationalExpression 
+
+@BitwiseExpression(): @EqualityExpression 
+@BitwiseExpression(): @BitwiseExpression & @EqualityExpression 
+@BitwiseExpression(): @BitwiseExpression ^ @EqualityExpression 
+@BitwiseExpression(): @BitwiseExpression | @EqualityExpression 
+
+@LogicalExpression(): @BitwiseExpression 
+@LogicalExpression(): @LogicalExpression && @BitwiseExpression 
+@LogicalExpression(): @LogicalExpression || @BitwiseExpression 
+
+@ConditionalExpression(): @LogicalExpression 
+@ConditionalExpression(): @LogicalExpression ? @AssignmentExpression: @AssignmentExpression 
+
+
+@AssignmentExpression(): @ConditionalExpression 
+@AssignmentExpression(): @YieldExpression
+@AssignmentExpression(): @ArrowFunction 
+@AssignmentExpression(): @AsyncArrowFunction 
+@AssignmentExpression(): @LeftHandSideExpression = @AssignmentExpression 
+@AssignmentExpression(): @LeftHandSideExpression @AssignmentOperator @AssignmentExpression 
+@AssignmentOperator(): $OneOf(all="*=,/=,%=,+=,-=,<<=,>>=,>>>=,&=,^=,|=,**=")
+
+
+# 12.16Comma Operator ( , )
+@Expression(): @AssignmentExpression 
+@Expression(): @Expression, @AssignmentExpression 

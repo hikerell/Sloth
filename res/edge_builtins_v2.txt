@@ -1,0 +1,2744 @@
+@IdDeclareStatement: $N::TObject = new Object()
+@IdDeclareStatement: $N::TFunction = new Function('')
+@IdDeclareStatement: $N::TFunction = new Function('a','')
+@IdDeclareStatement: $N::TFunction = new Function('a,b,c','return a+b+c')
+@IdDeclareStatement: $N::TArray = new Array()
+@IdDeclareStatement: $N::TArray = new Array(10)
+@IdDeclareStatement: $N::TArray = new Array(@BasicValue)
+@IdDeclareStatement: $N::TArray = new Array($...)
+@IdDeclareStatement: $N::TNumber = new Number(@BasicValue)
+@IdDeclareStatement: $N::TBoolean = new Boolean(@BasicValue)
+@IdDeclareStatement: $N::TString = new String("@define_dict_raw_key")
+@IdDeclareStatement: $N::TSymbol = new Symbol("x")
+@IdDeclareStatement: $N::TDate = new Date()
+#@IdDeclareStatement: $N::TPromise = new Promise($P)
+@IdDeclareStatement: $N::TRegExp = new RegExp()
+@IdDeclareStatement: $N::TRegExp = new RegExp('x')
+@IdDeclareStatement: $N::TArrayBuffer = new ArrayBuffer()
+@IdDeclareStatement: $N::TUint8Array = new Uint8Array()
+@IdDeclareStatement: $N::TInt8Array = new Int8Array()
+@IdDeclareStatement: $N::TUint16Array = new Uint16Array()
+@IdDeclareStatement: $N::TInt16Array = new Int16Array()
+@IdDeclareStatement: $N::TUint32Array = new Uint32Array()
+@IdDeclareStatement: $N::TInt32Array = new Int32Array()
+@IdDeclareStatement: $N::TFloat32Array = new Float32Array()
+@IdDeclareStatement: $N::TFloat64Array = new Float64Array()
+@IdDeclareStatement: $N::TUint8ClampedArray = new Uint8ClampedArray()
+@IdDeclareStatement: $N::TDataView = new DataView($R::TArrayBuffer)
+@IdDeclareStatement: $N::TMap = new Map($...)
+@IdDeclareStatement: $N::TSet = new Set($...)
+@IdDeclareStatement: $N::TWeakMap = new WeakMap()
+@IdDeclareStatement: $N::TWeakSet = new WeakSet()
+#@IdDeclareStatement: $N::TProxy = new Proxy($...)
+@IdDeclareStatement: $N::TSharedArrayBuffer = new SharedArrayBuffer()
+
+@BuiltInProperty: Object.length
+@BuiltInProperty: Object.name
+@BuiltInProperty: Object.prototype
+@BuiltInProperty: Object.assign
+@BuiltInProperty: Object.getOwnPropertyDescriptor
+@BuiltInProperty: Object.getOwnPropertyDescriptors
+@BuiltInProperty: Object.getOwnPropertyNames
+@BuiltInProperty: Object.getOwnPropertySymbols
+@BuiltInProperty: Object.is
+@BuiltInProperty: Object.preventExtensions
+@BuiltInProperty: Object.seal
+@BuiltInProperty: Object.create
+@BuiltInProperty: Object.defineProperties
+@BuiltInProperty: Object.defineProperty
+@BuiltInProperty: Object.freeze
+@BuiltInProperty: Object.getPrototypeOf
+@BuiltInProperty: Object.setPrototypeOf
+@BuiltInProperty: Object.isExtensible
+@BuiltInProperty: Object.isFrozen
+@BuiltInProperty: Object.isSealed
+@BuiltInProperty: Object.keys
+@BuiltInProperty: Object.entries
+@BuiltInProperty: Object.values
+@BuiltInProperty: Object.prototype.constructor
+@BuiltInProperty: Object.prototype.__defineGetter__
+@BuiltInProperty: Object.prototype.__defineSetter__
+@BuiltInProperty: Object.prototype.hasOwnProperty
+@BuiltInProperty: Object.prototype.__lookupGetter__
+@BuiltInProperty: Object.prototype.__lookupSetter__
+@BuiltInProperty: Object.prototype.isPrototypeOf
+@BuiltInProperty: Object.prototype.propertyIsEnumerable
+@BuiltInProperty: Object.prototype.toString
+@BuiltInProperty: Object.prototype.valueOf
+@BuiltInProperty: Object.prototype.__proto__
+@BuiltInProperty: Object.prototype.toLocaleString
+@BuiltInProperty: $R::TObject.constructor
+@BuiltInProperty: $R::TObject.__defineGetter__
+@BuiltInProperty: $R::TObject.__defineSetter__
+@BuiltInProperty: $R::TObject.hasOwnProperty
+@BuiltInProperty: $R::TObject.__lookupGetter__
+@BuiltInProperty: $R::TObject.__lookupSetter__
+@BuiltInProperty: $R::TObject.isPrototypeOf
+@BuiltInProperty: $R::TObject.propertyIsEnumerable
+@BuiltInProperty: $R::TObject.toString
+@BuiltInProperty: $R::TObject.valueOf
+@BuiltInProperty: $R::TObject.__proto__
+@BuiltInProperty: $R::TObject.toLocaleString
+
+@BuiltInProperty: Function.length
+@BuiltInProperty: Function.name
+@BuiltInProperty: Function.prototype
+@BuiltInProperty: Function.prototype.length
+@BuiltInProperty: Function.prototype.name
+@BuiltInProperty: Function.prototype.arguments
+@BuiltInProperty: Function.prototype.caller
+@BuiltInProperty: Function.prototype.constructor
+@BuiltInProperty: Function.prototype.apply
+@BuiltInProperty: Function.prototype.bind
+@BuiltInProperty: Function.prototype.call
+@BuiltInProperty: Function.prototype.toString
+@BuiltInProperty: $R::TFunction.length
+@BuiltInProperty: $R::TFunction.name
+@BuiltInProperty: $R::TFunction.arguments
+@BuiltInProperty: $R::TFunction.caller
+@BuiltInProperty: $R::TFunction.callee
+@BuiltInProperty: $R::TFunction.constructor
+@BuiltInProperty: $R::TFunction.apply
+@BuiltInProperty: $R::TFunction.bind
+@BuiltInProperty: $R::TFunction.call
+@BuiltInProperty: $R::TFunction.toString
+@BuiltInProperty: $R::TFunction.__defineGetter__
+@BuiltInProperty: $R::TFunction.__defineSetter__
+@BuiltInProperty: $R::TFunction.hasOwnProperty
+@BuiltInProperty: $R::TFunction.__lookupGetter__
+@BuiltInProperty: $R::TFunction.__lookupSetter__
+@BuiltInProperty: $R::TFunction.isPrototypeOf
+@BuiltInProperty: $R::TFunction.propertyIsEnumerable
+@BuiltInProperty: $R::TFunction.valueOf
+@BuiltInProperty: $R::TFunction.__proto__
+@BuiltInProperty: $R::TFunction.toLocaleString
+
+@BuiltInProperty: Array.length
+@BuiltInProperty: Array.name
+@BuiltInProperty: Array.prototype
+@BuiltInProperty: Array.isArray
+@BuiltInProperty: Array.from
+@BuiltInProperty: Array.of
+@BuiltInProperty: Array.prototype.length
+@BuiltInProperty: Array.prototype.constructor
+@BuiltInProperty: Array.prototype.concat
+@BuiltInProperty: Array.prototype.find
+@BuiltInProperty: Array.prototype.findIndex
+@BuiltInProperty: Array.prototype.pop
+@BuiltInProperty: Array.prototype.push
+@BuiltInProperty: Array.prototype.shift
+@BuiltInProperty: Array.prototype.unshift
+@BuiltInProperty: Array.prototype.slice
+@BuiltInProperty: Array.prototype.splice
+@BuiltInProperty: Array.prototype.includes
+@BuiltInProperty: Array.prototype.indexOf
+@BuiltInProperty: Array.prototype.keys
+@BuiltInProperty: Array.prototype.entries
+@BuiltInProperty: Array.prototype.forEach
+@BuiltInProperty: Array.prototype.filter
+@BuiltInProperty: Array.prototype.map
+@BuiltInProperty: Array.prototype.every
+@BuiltInProperty: Array.prototype.some
+@BuiltInProperty: Array.prototype.reduce
+@BuiltInProperty: Array.prototype.reduceRight
+@BuiltInProperty: Array.prototype.toString
+@BuiltInProperty: Array.prototype.toLocaleString
+@BuiltInProperty: Array.prototype.join
+@BuiltInProperty: Array.prototype.reverse
+@BuiltInProperty: Array.prototype.sort
+@BuiltInProperty: Array.prototype.lastIndexOf
+@BuiltInProperty: Array.prototype.copyWithin
+@BuiltInProperty: Array.prototype.fill
+@BuiltInProperty: Array.prototype.values
+@BuiltInProperty: $R::TArray.length
+@BuiltInProperty: $R::TArray.constructor
+@BuiltInProperty: $R::TArray.concat
+@BuiltInProperty: $R::TArray.find
+@BuiltInProperty: $R::TArray.findIndex
+@BuiltInProperty: $R::TArray.pop
+@BuiltInProperty: $R::TArray.push
+@BuiltInProperty: $R::TArray.shift
+@BuiltInProperty: $R::TArray.unshift
+@BuiltInProperty: $R::TArray.slice
+@BuiltInProperty: $R::TArray.splice
+@BuiltInProperty: $R::TArray.includes
+@BuiltInProperty: $R::TArray.indexOf
+@BuiltInProperty: $R::TArray.keys
+@BuiltInProperty: $R::TArray.entries
+@BuiltInProperty: $R::TArray.forEach
+@BuiltInProperty: $R::TArray.filter
+@BuiltInProperty: $R::TArray.map
+@BuiltInProperty: $R::TArray.every
+@BuiltInProperty: $R::TArray.some
+@BuiltInProperty: $R::TArray.reduce
+@BuiltInProperty: $R::TArray.reduceRight
+@BuiltInProperty: $R::TArray.toString
+@BuiltInProperty: $R::TArray.toLocaleString
+@BuiltInProperty: $R::TArray.join
+@BuiltInProperty: $R::TArray.reverse
+@BuiltInProperty: $R::TArray.sort
+@BuiltInProperty: $R::TArray.lastIndexOf
+@BuiltInProperty: $R::TArray.copyWithin
+@BuiltInProperty: $R::TArray.fill
+@BuiltInProperty: $R::TArray.values
+@BuiltInProperty: $R::TArray.__defineGetter__
+@BuiltInProperty: $R::TArray.__defineSetter__
+@BuiltInProperty: $R::TArray.hasOwnProperty
+@BuiltInProperty: $R::TArray.__lookupGetter__
+@BuiltInProperty: $R::TArray.__lookupSetter__
+@BuiltInProperty: $R::TArray.isPrototypeOf
+@BuiltInProperty: $R::TArray.propertyIsEnumerable
+@BuiltInProperty: $R::TArray.toString
+@BuiltInProperty: $R::TArray.valueOf
+@BuiltInProperty: $R::TArray.__proto__
+@BuiltInProperty: $R::TArray.toLocaleString
+
+@BuiltInProperty: Number.length
+@BuiltInProperty: Number.name
+@BuiltInProperty: Number.prototype
+@BuiltInProperty: Number.isFinite
+@BuiltInProperty: Number.isInteger
+@BuiltInProperty: Number.isNaN
+@BuiltInProperty: Number.isSafeInteger
+@BuiltInProperty: Number.parseFloat
+@BuiltInProperty: Number.parseInt
+@BuiltInProperty: Number.MAX_VALUE
+@BuiltInProperty: Number.MIN_VALUE
+@BuiltInProperty: Number.NaN
+@BuiltInProperty: Number.NEGATIVE_INFINITY
+@BuiltInProperty: Number.POSITIVE_INFINITY
+@BuiltInProperty: Number.MAX_SAFE_INTEGER
+@BuiltInProperty: Number.MIN_SAFE_INTEGER
+@BuiltInProperty: Number.EPSILON
+@BuiltInProperty: Number.prototype.constructor
+@BuiltInProperty: Number.prototype.toExponential
+@BuiltInProperty: Number.prototype.toFixed
+@BuiltInProperty: Number.prototype.toPrecision
+@BuiltInProperty: Number.prototype.toString
+@BuiltInProperty: Number.prototype.valueOf
+@BuiltInProperty: Number.prototype.toLocaleString
+@BuiltInProperty: $R::TNumber.constructor
+@BuiltInProperty: $R::TNumber.toExponential
+@BuiltInProperty: $R::TNumber.toFixed
+@BuiltInProperty: $R::TNumber.toPrecision
+@BuiltInProperty: $R::TNumber.toString
+@BuiltInProperty: $R::TNumber.valueOf
+@BuiltInProperty: $R::TNumber.toLocaleString
+@BuiltInProperty: $R::TNumber.__defineGetter__
+@BuiltInProperty: $R::TNumber.__defineSetter__
+@BuiltInProperty: $R::TNumber.hasOwnProperty
+@BuiltInProperty: $R::TNumber.__lookupGetter__
+@BuiltInProperty: $R::TNumber.__lookupSetter__
+@BuiltInProperty: $R::TNumber.isPrototypeOf
+@BuiltInProperty: $R::TNumber.propertyIsEnumerable
+@BuiltInProperty: $R::TNumber.__proto__
+@BuiltInProperty: $R::TNumber.toLocaleString
+
+
+@BuiltInProperty: Boolean.length
+@BuiltInProperty: Boolean.name
+@BuiltInProperty: Boolean.prototype
+@BuiltInProperty: Boolean.prototype.constructor
+@BuiltInProperty: Boolean.prototype.toString
+@BuiltInProperty: Boolean.prototype.valueOf
+@BuiltInProperty: $R::TBoolean.constructor
+@BuiltInProperty: $R::TBoolean.toString
+@BuiltInProperty: $R::TBoolean.valueOf
+@BuiltInProperty: $R::TBoolean.__defineGetter__
+@BuiltInProperty: $R::TBoolean.__defineSetter__
+@BuiltInProperty: $R::TBoolean.hasOwnProperty
+@BuiltInProperty: $R::TBoolean.__lookupGetter__
+@BuiltInProperty: $R::TBoolean.__lookupSetter__
+@BuiltInProperty: $R::TBoolean.isPrototypeOf
+@BuiltInProperty: $R::TBoolean.propertyIsEnumerable
+@BuiltInProperty: $R::TBoolean.__proto__
+@BuiltInProperty: $R::TBoolean.toLocaleString
+
+@BuiltInProperty: String.length
+@BuiltInProperty: String.name
+@BuiltInProperty: String.prototype
+@BuiltInProperty: String.fromCharCode
+@BuiltInProperty: String.fromCodePoint
+@BuiltInProperty: String.raw
+@BuiltInProperty: String.prototype.length
+@BuiltInProperty: String.prototype.constructor
+@BuiltInProperty: String.prototype.anchor
+@BuiltInProperty: String.prototype.big
+@BuiltInProperty: String.prototype.blink
+@BuiltInProperty: String.prototype.bold
+@BuiltInProperty: String.prototype.charAt
+@BuiltInProperty: String.prototype.charCodeAt
+@BuiltInProperty: String.prototype.codePointAt
+@BuiltInProperty: String.prototype.concat
+@BuiltInProperty: String.prototype.endsWith
+@BuiltInProperty: String.prototype.fontcolor
+@BuiltInProperty: String.prototype.fontsize
+@BuiltInProperty: String.prototype.fixed
+@BuiltInProperty: String.prototype.includes
+@BuiltInProperty: String.prototype.indexOf
+@BuiltInProperty: String.prototype.italics
+@BuiltInProperty: String.prototype.lastIndexOf
+@BuiltInProperty: String.prototype.link
+@BuiltInProperty: String.prototype.localeCompare
+@BuiltInProperty: String.prototype.match
+@BuiltInProperty: String.prototype.normalize
+@BuiltInProperty: String.prototype.padEnd
+@BuiltInProperty: String.prototype.padStart
+@BuiltInProperty: String.prototype.repeat
+@BuiltInProperty: String.prototype.replace
+@BuiltInProperty: String.prototype.search
+@BuiltInProperty: String.prototype.slice
+@BuiltInProperty: String.prototype.small
+@BuiltInProperty: String.prototype.split
+@BuiltInProperty: String.prototype.strike
+@BuiltInProperty: String.prototype.sub
+@BuiltInProperty: String.prototype.substr
+@BuiltInProperty: String.prototype.substring
+@BuiltInProperty: String.prototype.sup
+@BuiltInProperty: String.prototype.startsWith
+@BuiltInProperty: String.prototype.toString
+@BuiltInProperty: String.prototype.trim
+@BuiltInProperty: String.prototype.trimLeft
+@BuiltInProperty: String.prototype.trimRight
+@BuiltInProperty: String.prototype.toLowerCase
+@BuiltInProperty: String.prototype.toUpperCase
+@BuiltInProperty: String.prototype.valueOf
+@BuiltInProperty: String.prototype.toLocaleLowerCase
+@BuiltInProperty: String.prototype.toLocaleUpperCase
+@BuiltInProperty: String.prototype.trimStart
+@BuiltInProperty: String.prototype.trimEnd
+@BuiltInProperty: $R::TString.length
+@BuiltInProperty: $R::TString.constructor
+@BuiltInProperty: $R::TString.anchor
+@BuiltInProperty: $R::TString.big
+@BuiltInProperty: $R::TString.blink
+@BuiltInProperty: $R::TString.bold
+@BuiltInProperty: $R::TString.charAt
+@BuiltInProperty: $R::TString.charCodeAt
+@BuiltInProperty: $R::TString.codePointAt
+@BuiltInProperty: $R::TString.concat
+@BuiltInProperty: $R::TString.endsWith
+@BuiltInProperty: $R::TString.fontcolor
+@BuiltInProperty: $R::TString.fontsize
+@BuiltInProperty: $R::TString.fixed
+@BuiltInProperty: $R::TString.includes
+@BuiltInProperty: $R::TString.indexOf
+@BuiltInProperty: $R::TString.italics
+@BuiltInProperty: $R::TString.lastIndexOf
+@BuiltInProperty: $R::TString.link
+@BuiltInProperty: $R::TString.localeCompare
+@BuiltInProperty: $R::TString.match
+@BuiltInProperty: $R::TString.normalize
+@BuiltInProperty: $R::TString.padEnd
+@BuiltInProperty: $R::TString.padStart
+@BuiltInProperty: $R::TString.repeat
+@BuiltInProperty: $R::TString.replace
+@BuiltInProperty: $R::TString.search
+@BuiltInProperty: $R::TString.slice
+@BuiltInProperty: $R::TString.small
+@BuiltInProperty: $R::TString.split
+@BuiltInProperty: $R::TString.strike
+@BuiltInProperty: $R::TString.sub
+@BuiltInProperty: $R::TString.substr
+@BuiltInProperty: $R::TString.substring
+@BuiltInProperty: $R::TString.sup
+@BuiltInProperty: $R::TString.startsWith
+@BuiltInProperty: $R::TString.toString
+@BuiltInProperty: $R::TString.trim
+@BuiltInProperty: $R::TString.trimLeft
+@BuiltInProperty: $R::TString.trimRight
+@BuiltInProperty: $R::TString.toLowerCase
+@BuiltInProperty: $R::TString.toUpperCase
+@BuiltInProperty: $R::TString.valueOf
+@BuiltInProperty: $R::TString.toLocaleLowerCase
+@BuiltInProperty: $R::TString.toLocaleUpperCase
+@BuiltInProperty: $R::TString.trimStart
+@BuiltInProperty: $R::TString.trimEnd
+@BuiltInProperty: $R::TString.__defineGetter__
+@BuiltInProperty: $R::TString.__defineSetter__
+@BuiltInProperty: $R::TString.hasOwnProperty
+@BuiltInProperty: $R::TString.__lookupGetter__
+@BuiltInProperty: $R::TString.__lookupSetter__
+@BuiltInProperty: $R::TString.isPrototypeOf
+@BuiltInProperty: $R::TString.propertyIsEnumerable
+@BuiltInProperty: $R::TString.__proto__
+@BuiltInProperty: $R::TString.toLocaleString
+
+@BuiltInProperty: Symbol.length
+@BuiltInProperty: Symbol.name
+@BuiltInProperty: Symbol.prototype
+@BuiltInProperty: Symbol.for
+@BuiltInProperty: Symbol.keyFor
+@BuiltInProperty: Symbol.asyncIterator
+@BuiltInProperty: Symbol.hasInstance
+@BuiltInProperty: Symbol.isConcatSpreadable
+@BuiltInProperty: Symbol.iterator
+@BuiltInProperty: Symbol.match
+@BuiltInProperty: Symbol.replace
+@BuiltInProperty: Symbol.search
+@BuiltInProperty: Symbol.species
+@BuiltInProperty: Symbol.split
+@BuiltInProperty: Symbol.toPrimitive
+@BuiltInProperty: Symbol.toStringTag
+@BuiltInProperty: Symbol.unscopables
+@BuiltInProperty: Symbol.prototype.constructor
+@BuiltInProperty: Symbol.prototype.toString
+@BuiltInProperty: Symbol.prototype.valueOf
+@BuiltInProperty: $R::TSymbol.constructor
+@BuiltInProperty: $R::TSymbol.__defineGetter__
+@BuiltInProperty: $R::TSymbol.__defineSetter__
+@BuiltInProperty: $R::TSymbol.hasOwnProperty
+@BuiltInProperty: $R::TSymbol.__lookupGetter__
+@BuiltInProperty: $R::TSymbol.__lookupSetter__
+@BuiltInProperty: $R::TSymbol.isPrototypeOf
+@BuiltInProperty: $R::TSymbol.propertyIsEnumerable
+@BuiltInProperty: $R::TSymbol.toString
+@BuiltInProperty: $R::TSymbol.valueOf
+@BuiltInProperty: $R::TSymbol.__proto__
+@BuiltInProperty: $R::TSymbol.toLocaleString
+
+@BuiltInProperty: Date.length
+@BuiltInProperty: Date.name
+@BuiltInProperty: Date.prototype
+@BuiltInProperty: Date.now
+@BuiltInProperty: Date.parse
+@BuiltInProperty: Date.UTC
+@BuiltInProperty: Date.prototype.constructor
+@BuiltInProperty: Date.prototype.toString
+@BuiltInProperty: Date.prototype.toDateString
+@BuiltInProperty: Date.prototype.toTimeString
+@BuiltInProperty: Date.prototype.toISOString
+@BuiltInProperty: Date.prototype.toUTCString
+@BuiltInProperty: Date.prototype.toGMTString
+@BuiltInProperty: Date.prototype.getDate
+@BuiltInProperty: Date.prototype.setDate
+@BuiltInProperty: Date.prototype.getDay
+@BuiltInProperty: Date.prototype.getFullYear
+@BuiltInProperty: Date.prototype.setFullYear
+@BuiltInProperty: Date.prototype.getHours
+@BuiltInProperty: Date.prototype.setHours
+@BuiltInProperty: Date.prototype.getMilliseconds
+@BuiltInProperty: Date.prototype.setMilliseconds
+@BuiltInProperty: Date.prototype.getMinutes
+@BuiltInProperty: Date.prototype.setMinutes
+@BuiltInProperty: Date.prototype.getMonth
+@BuiltInProperty: Date.prototype.setMonth
+@BuiltInProperty: Date.prototype.getSeconds
+@BuiltInProperty: Date.prototype.setSeconds
+@BuiltInProperty: Date.prototype.getTime
+@BuiltInProperty: Date.prototype.setTime
+@BuiltInProperty: Date.prototype.getTimezoneOffset
+@BuiltInProperty: Date.prototype.getUTCDate
+@BuiltInProperty: Date.prototype.setUTCDate
+@BuiltInProperty: Date.prototype.getUTCDay
+@BuiltInProperty: Date.prototype.getUTCFullYear
+@BuiltInProperty: Date.prototype.setUTCFullYear
+@BuiltInProperty: Date.prototype.getUTCHours
+@BuiltInProperty: Date.prototype.setUTCHours
+@BuiltInProperty: Date.prototype.getUTCMilliseconds
+@BuiltInProperty: Date.prototype.setUTCMilliseconds
+@BuiltInProperty: Date.prototype.getUTCMinutes
+@BuiltInProperty: Date.prototype.setUTCMinutes
+@BuiltInProperty: Date.prototype.getUTCMonth
+@BuiltInProperty: Date.prototype.setUTCMonth
+@BuiltInProperty: Date.prototype.getUTCSeconds
+@BuiltInProperty: Date.prototype.setUTCSeconds
+@BuiltInProperty: Date.prototype.valueOf
+@BuiltInProperty: Date.prototype.getYear
+@BuiltInProperty: Date.prototype.setYear
+@BuiltInProperty: Date.prototype.toJSON
+@BuiltInProperty: Date.prototype.toLocaleString
+@BuiltInProperty: Date.prototype.toLocaleDateString
+@BuiltInProperty: Date.prototype.toLocaleTimeString
+@BuiltInProperty: $R::TDate.constructor
+@BuiltInProperty: $R::TDate.toString
+@BuiltInProperty: $R::TDate.toDateString
+@BuiltInProperty: $R::TDate.toTimeString
+@BuiltInProperty: $R::TDate.toISOString
+@BuiltInProperty: $R::TDate.toUTCString
+@BuiltInProperty: $R::TDate.toGMTString
+@BuiltInProperty: $R::TDate.getDate
+@BuiltInProperty: $R::TDate.setDate
+@BuiltInProperty: $R::TDate.getDay
+@BuiltInProperty: $R::TDate.getFullYear
+@BuiltInProperty: $R::TDate.setFullYear
+@BuiltInProperty: $R::TDate.getHours
+@BuiltInProperty: $R::TDate.setHours
+@BuiltInProperty: $R::TDate.getMilliseconds
+@BuiltInProperty: $R::TDate.setMilliseconds
+@BuiltInProperty: $R::TDate.getMinutes
+@BuiltInProperty: $R::TDate.setMinutes
+@BuiltInProperty: $R::TDate.getMonth
+@BuiltInProperty: $R::TDate.setMonth
+@BuiltInProperty: $R::TDate.getSeconds
+@BuiltInProperty: $R::TDate.setSeconds
+@BuiltInProperty: $R::TDate.getTime
+@BuiltInProperty: $R::TDate.setTime
+@BuiltInProperty: $R::TDate.getTimezoneOffset
+@BuiltInProperty: $R::TDate.getUTCDate
+@BuiltInProperty: $R::TDate.setUTCDate
+@BuiltInProperty: $R::TDate.getUTCDay
+@BuiltInProperty: $R::TDate.getUTCFullYear
+@BuiltInProperty: $R::TDate.setUTCFullYear
+@BuiltInProperty: $R::TDate.getUTCHours
+@BuiltInProperty: $R::TDate.setUTCHours
+@BuiltInProperty: $R::TDate.getUTCMilliseconds
+@BuiltInProperty: $R::TDate.setUTCMilliseconds
+@BuiltInProperty: $R::TDate.getUTCMinutes
+@BuiltInProperty: $R::TDate.setUTCMinutes
+@BuiltInProperty: $R::TDate.getUTCMonth
+@BuiltInProperty: $R::TDate.setUTCMonth
+@BuiltInProperty: $R::TDate.getUTCSeconds
+@BuiltInProperty: $R::TDate.setUTCSeconds
+@BuiltInProperty: $R::TDate.valueOf
+@BuiltInProperty: $R::TDate.getYear
+@BuiltInProperty: $R::TDate.setYear
+@BuiltInProperty: $R::TDate.toJSON
+@BuiltInProperty: $R::TDate.toLocaleString
+@BuiltInProperty: $R::TDate.toLocaleDateString
+@BuiltInProperty: $R::TDate.toLocaleTimeString
+@BuiltInProperty: $R::TDate.__defineGetter__
+@BuiltInProperty: $R::TDate.__defineSetter__
+@BuiltInProperty: $R::TDate.hasOwnProperty
+@BuiltInProperty: $R::TDate.__lookupGetter__
+@BuiltInProperty: $R::TDate.__lookupSetter__
+@BuiltInProperty: $R::TDate.isPrototypeOf
+@BuiltInProperty: $R::TDate.propertyIsEnumerable
+@BuiltInProperty: $R::TDate.__proto__
+@BuiltInProperty: $R::TDate.toLocaleString
+
+@BuiltInProperty: Promise.length
+@BuiltInProperty: Promise.name
+@BuiltInProperty: Promise.prototype
+@BuiltInProperty: Promise.all
+@BuiltInProperty: Promise.race
+@BuiltInProperty: Promise.resolve
+@BuiltInProperty: Promise.reject
+@BuiltInProperty: Promise.prototype.constructor
+@BuiltInProperty: Promise.prototype.then
+@BuiltInProperty: Promise.prototype.catch
+@BuiltInProperty: Promise.prototype.finally
+@BuiltInProperty: $R::TPromise.constructor
+@BuiltInProperty: $R::TPromise.then
+@BuiltInProperty: $R::TPromise.catch
+@BuiltInProperty: $R::TPromise.finally
+@BuiltInProperty: $R::TPromise.__defineGetter__
+@BuiltInProperty: $R::TPromise.__defineSetter__
+@BuiltInProperty: $R::TPromise.hasOwnProperty
+@BuiltInProperty: $R::TPromise.__lookupGetter__
+@BuiltInProperty: $R::TPromise.__lookupSetter__
+@BuiltInProperty: $R::TPromise.isPrototypeOf
+@BuiltInProperty: $R::TPromise.propertyIsEnumerable
+@BuiltInProperty: $R::TPromise.toString
+@BuiltInProperty: $R::TPromise.valueOf
+@BuiltInProperty: $R::TPromise.__proto__
+@BuiltInProperty: $R::TPromise.toLocaleString
+
+@BuiltInProperty: RegExp.length
+@BuiltInProperty: RegExp.name
+@BuiltInProperty: RegExp.prototype
+@BuiltInProperty: RegExp.input
+#@BuiltInProperty: RegExp.$$_
+@BuiltInProperty: RegExp.lastMatch
+#@BuiltInProperty: RegExp.$$&
+@BuiltInProperty: RegExp.lastParen
+#@BuiltInProperty: RegExp.$$+
+@BuiltInProperty: RegExp.leftContext
+#@BuiltInProperty: RegExp.$$`
+@BuiltInProperty: RegExp.rightContext
+#@BuiltInProperty: RegExp.$$'
+#@BuiltInProperty: RegExp.$$1
+#@BuiltInProperty: RegExp.$$2
+#@BuiltInProperty: RegExp.$$3
+#@BuiltInProperty: RegExp.$$4
+#@BuiltInProperty: RegExp.$$5
+#@BuiltInProperty: RegExp.$$6
+#@BuiltInProperty: RegExp.$$7
+#@BuiltInProperty: RegExp.$$8
+#@BuiltInProperty: RegExp.$$9
+@BuiltInProperty:RegExp.prototype.constructor
+@BuiltInProperty:RegExp.prototype.exec
+@BuiltInProperty:RegExp.prototype.dotAll
+@BuiltInProperty:RegExp.prototype.flags
+@BuiltInProperty:RegExp.prototype.global
+@BuiltInProperty:RegExp.prototype.ignoreCase
+@BuiltInProperty:RegExp.prototype.multiline
+@BuiltInProperty:RegExp.prototype.source
+@BuiltInProperty:RegExp.prototype.sticky
+@BuiltInProperty:RegExp.prototype.unicode
+@BuiltInProperty:RegExp.prototype.compile
+@BuiltInProperty:RegExp.prototype.toString
+@BuiltInProperty:RegExp.prototype.test
+@BuiltInProperty: $R::TRegExp.constructor
+@BuiltInProperty: $R::TRegExp.exec
+@BuiltInProperty: $R::TRegExp.dotAll
+@BuiltInProperty: $R::TRegExp.flags
+@BuiltInProperty: $R::TRegExp.global
+@BuiltInProperty: $R::TRegExp.ignoreCase
+@BuiltInProperty: $R::TRegExp.multiline
+@BuiltInProperty: $R::TRegExp.source
+@BuiltInProperty: $R::TRegExp.sticky
+@BuiltInProperty: $R::TRegExp.unicode
+@BuiltInProperty: $R::TRegExp.compile
+@BuiltInProperty: $R::TRegExp.toString
+@BuiltInProperty: $R::TRegExp.test
+@BuiltInProperty: $R::TRegExp.__defineGetter__
+@BuiltInProperty: $R::TRegExp.__defineSetter__
+@BuiltInProperty: $R::TRegExp.hasOwnProperty
+@BuiltInProperty: $R::TRegExp.__lookupGetter__
+@BuiltInProperty: $R::TRegExp.__lookupSetter__
+@BuiltInProperty: $R::TRegExp.isPrototypeOf
+@BuiltInProperty: $R::TRegExp.propertyIsEnumerable
+@BuiltInProperty: $R::TRegExp.toString
+@BuiltInProperty: $R::TRegExp.__proto__
+@BuiltInProperty: $R::TRegExp.toLocaleString
+
+#@BuiltInProperty:Error
+#@BuiltInProperty:Error.length
+#@BuiltInProperty:Error.name
+#@BuiltInProperty:Error.prototype
+#@BuiltInProperty:Error.captureStackTrace
+#@BuiltInProperty:Error.stackTraceLimit
+#@BuiltInProperty:Error.prototype.constructor
+#@BuiltInProperty:Error.prototype.name
+#@BuiltInProperty:Error.prototype.message
+#@BuiltInProperty:Error.prototype.toString
+#@BuiltInProperty:$R.message
+#@BuiltInProperty:$R.__proto__.message
+#@BuiltInProperty:EvalError
+#@BuiltInProperty:EvalError.length
+#@BuiltInProperty:EvalError.name
+#@BuiltInProperty:EvalError.prototype
+#@BuiltInProperty:EvalError.prototype.constructor
+#@BuiltInProperty:EvalError.prototype.name
+#@BuiltInProperty:EvalError.prototype.message
+#@BuiltInProperty:EvalError.prototype.toString
+#@BuiltInProperty:RangeError
+#@BuiltInProperty:RangeError.length
+#@BuiltInProperty:RangeError.name
+#@BuiltInProperty:RangeError.prototype
+#@BuiltInProperty:RangeError.prototype.constructor
+#@BuiltInProperty:RangeError.prototype.name
+#@BuiltInProperty:RangeError.prototype.message
+#@BuiltInProperty:RangeError.prototype.toString
+#@BuiltInProperty:ReferenceError
+#@BuiltInProperty:ReferenceError.length
+#@BuiltInProperty:ReferenceError.name
+#@BuiltInProperty:ReferenceError.prototype
+#@BuiltInProperty:ReferenceError.prototype.constructor
+#@BuiltInProperty:ReferenceError.prototype.name
+#@BuiltInProperty:ReferenceError.prototype.message
+#@BuiltInProperty:ReferenceError.prototype.toString
+#@BuiltInProperty:SyntaxError
+#@BuiltInProperty:SyntaxError.length
+#@BuiltInProperty:SyntaxError.name
+#@BuiltInProperty:SyntaxError.prototype
+#@BuiltInProperty:SyntaxError.prototype.constructor
+#@BuiltInProperty:SyntaxError.prototype.name
+#@BuiltInProperty:SyntaxError.prototype.message
+#@BuiltInProperty:SyntaxError.prototype.toString
+#@BuiltInProperty:TypeError
+#@BuiltInProperty:TypeError.length
+#@BuiltInProperty:TypeError.name
+#@BuiltInProperty:TypeError.prototype
+#@BuiltInProperty:TypeError.prototype.constructor
+#@BuiltInProperty:TypeError.prototype.name
+#@BuiltInProperty:TypeError.prototype.message
+#@BuiltInProperty:TypeError.prototype.toString
+#@BuiltInProperty:URIError
+#@BuiltInProperty:URIError.length
+#@BuiltInProperty:URIError.name
+#@BuiltInProperty:URIError.prototype
+#@BuiltInProperty:URIError.prototype.constructor
+#@BuiltInProperty:URIError.prototype.name
+#@BuiltInProperty:URIError.prototype.message
+#@BuiltInProperty:URIError.prototype.toString
+
+@BuiltInProperty: ArrayBuffer.length
+@BuiltInProperty: ArrayBuffer.name
+@BuiltInProperty: ArrayBuffer.prototype
+@BuiltInProperty: ArrayBuffer.isView
+@BuiltInProperty: ArrayBuffer.prototype.constructor
+@BuiltInProperty: ArrayBuffer.prototype.byteLength
+@BuiltInProperty: ArrayBuffer.prototype.slice
+@BuiltInProperty: $R::TArrayBuffer.constructor
+@BuiltInProperty: $R::TArrayBuffer.byteLength
+@BuiltInProperty: $R::TArrayBuffer.slice
+@BuiltInProperty: $R::TArrayBuffer.__defineGetter__
+@BuiltInProperty: $R::TArrayBuffer.__defineSetter__
+@BuiltInProperty: $R::TArrayBuffer.hasOwnProperty
+@BuiltInProperty: $R::TArrayBuffer.__lookupGetter__
+@BuiltInProperty: $R::TArrayBuffer.__lookupSetter__
+@BuiltInProperty: $R::TArrayBuffer.isPrototypeOf
+@BuiltInProperty: $R::TArrayBuffer.propertyIsEnumerable
+@BuiltInProperty: $R::TArrayBuffer.toString
+@BuiltInProperty: $R::TArrayBuffer.valueOf
+@BuiltInProperty: $R::TArrayBuffer.__proto__
+@BuiltInProperty: $R::TArrayBuffer.toLocaleString
+
+@BuiltInProperty: Uint8Array.length
+@BuiltInProperty: Uint8Array.name
+@BuiltInProperty: Uint8Array.prototype
+@BuiltInProperty: Uint8Array.BYTES_PER_ELEMENT
+@BuiltInProperty: Uint8Array.prototype.constructor
+@BuiltInProperty: Uint8Array.prototype.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TUint8Array.constructor
+@BuiltInProperty: $R::TUint8Array.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TUint8Array.__defineGetter__
+@BuiltInProperty: $R::TUint8Array.__defineSetter__
+@BuiltInProperty: $R::TUint8Array.hasOwnProperty
+@BuiltInProperty: $R::TUint8Array.__lookupGetter__
+@BuiltInProperty: $R::TUint8Array.__lookupSetter__
+@BuiltInProperty: $R::TUint8Array.isPrototypeOf
+@BuiltInProperty: $R::TUint8Array.propertyIsEnumerable
+@BuiltInProperty: $R::TUint8Array.toString
+@BuiltInProperty: $R::TUint8Array.valueOf
+@BuiltInProperty: $R::TUint8Array.__proto__
+@BuiltInProperty: $R::TUint8Array.toLocaleString
+
+@BuiltInProperty: Int8Array.length
+@BuiltInProperty: Int8Array.name
+@BuiltInProperty: Int8Array.prototype
+@BuiltInProperty: Int8Array.BYTES_PER_ELEMENT
+@BuiltInProperty: Int8Array.prototype.constructor
+@BuiltInProperty: Int8Array.prototype.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TInt8Array.constructor
+@BuiltInProperty: $R::TInt8Array.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TInt8Array.__defineGetter__
+@BuiltInProperty: $R::TInt8Array.__defineSetter__
+@BuiltInProperty: $R::TInt8Array.hasOwnProperty
+@BuiltInProperty: $R::TInt8Array.__lookupGetter__
+@BuiltInProperty: $R::TInt8Array.__lookupSetter__
+@BuiltInProperty: $R::TInt8Array.isPrototypeOf
+@BuiltInProperty: $R::TInt8Array.propertyIsEnumerable
+@BuiltInProperty: $R::TInt8Array.toString
+@BuiltInProperty: $R::TInt8Array.valueOf
+@BuiltInProperty: $R::TInt8Array.__proto__
+@BuiltInProperty: $R::TInt8Array.toLocaleString
+
+@BuiltInProperty: Uint16Array.length
+@BuiltInProperty: Uint16Array.name
+@BuiltInProperty: Uint16Array.prototype
+@BuiltInProperty: Uint16Array.BYTES_PER_ELEMENT
+@BuiltInProperty: Uint16Array.prototype.constructor
+@BuiltInProperty: Uint16Array.prototype.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TUint16Array.constructor
+@BuiltInProperty: $R::TUint16Array.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TUint16Array.__defineGetter__
+@BuiltInProperty: $R::TUint16Array.__defineSetter__
+@BuiltInProperty: $R::TUint16Array.hasOwnProperty
+@BuiltInProperty: $R::TUint16Array.__lookupGetter__
+@BuiltInProperty: $R::TUint16Array.__lookupSetter__
+@BuiltInProperty: $R::TUint16Array.isPrototypeOf
+@BuiltInProperty: $R::TUint16Array.propertyIsEnumerable
+@BuiltInProperty: $R::TUint16Array.toString
+@BuiltInProperty: $R::TUint16Array.valueOf
+@BuiltInProperty: $R::TUint16Array.__proto__
+@BuiltInProperty: $R::TUint16Array.toLocaleString
+
+@BuiltInProperty: Int16Array.length
+@BuiltInProperty: Int16Array.name
+@BuiltInProperty: Int16Array.prototype
+@BuiltInProperty: Int16Array.BYTES_PER_ELEMENT
+@BuiltInProperty: Int16Array.prototype.constructor
+@BuiltInProperty: Int16Array.prototype.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TInt16Array.constructor
+@BuiltInProperty: $R::TInt16Array.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TInt16Array.__defineGetter__
+@BuiltInProperty: $R::TInt16Array.__defineSetter__
+@BuiltInProperty: $R::TInt16Array.hasOwnProperty
+@BuiltInProperty: $R::TInt16Array.__lookupGetter__
+@BuiltInProperty: $R::TInt16Array.__lookupSetter__
+@BuiltInProperty: $R::TInt16Array.isPrototypeOf
+@BuiltInProperty: $R::TInt16Array.propertyIsEnumerable
+@BuiltInProperty: $R::TInt16Array.toString
+@BuiltInProperty: $R::TInt16Array.valueOf
+@BuiltInProperty: $R::TInt16Array.__proto__
+@BuiltInProperty: $R::TInt16Array.toLocaleString
+
+@BuiltInProperty: Uint32Array.length
+@BuiltInProperty: Uint32Array.name
+@BuiltInProperty: Uint32Array.prototype
+@BuiltInProperty: Uint32Array.BYTES_PER_ELEMENT
+@BuiltInProperty: Uint32Array.prototype.constructor
+@BuiltInProperty: Uint32Array.prototype.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TUint32Array.constructor
+@BuiltInProperty: $R::TUint32Array.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TUint32Array.__defineGetter__
+@BuiltInProperty: $R::TUint32Array.__defineSetter__
+@BuiltInProperty: $R::TUint32Array.hasOwnProperty
+@BuiltInProperty: $R::TUint32Array.__lookupGetter__
+@BuiltInProperty: $R::TUint32Array.__lookupSetter__
+@BuiltInProperty: $R::TUint32Array.isPrototypeOf
+@BuiltInProperty: $R::TUint32Array.propertyIsEnumerable
+@BuiltInProperty: $R::TUint32Array.toString
+@BuiltInProperty: $R::TUint32Array.valueOf
+@BuiltInProperty: $R::TUint32Array.__proto__
+@BuiltInProperty: $R::TUint32Array.toLocaleString
+
+@BuiltInProperty: Int32Array.length
+@BuiltInProperty: Int32Array.name
+@BuiltInProperty: Int32Array.prototype
+@BuiltInProperty: Int32Array.BYTES_PER_ELEMENT
+@BuiltInProperty: Int32Array.prototype.constructor
+@BuiltInProperty: Int32Array.prototype.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TInt32Array.constructor
+@BuiltInProperty: $R::TInt32Array.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TInt32Array.__defineGetter__
+@BuiltInProperty: $R::TInt32Array.__defineSetter__
+@BuiltInProperty: $R::TInt32Array.hasOwnProperty
+@BuiltInProperty: $R::TInt32Array.__lookupGetter__
+@BuiltInProperty: $R::TInt32Array.__lookupSetter__
+@BuiltInProperty: $R::TInt32Array.isPrototypeOf
+@BuiltInProperty: $R::TInt32Array.propertyIsEnumerable
+@BuiltInProperty: $R::TInt32Array.toString
+@BuiltInProperty: $R::TInt32Array.valueOf
+@BuiltInProperty: $R::TInt32Array.__proto__
+@BuiltInProperty: $R::TInt32Array.toLocaleString
+
+@BuiltInProperty:Float32Array.length
+@BuiltInProperty:Float32Array.name
+@BuiltInProperty:Float32Array.prototype
+@BuiltInProperty:Float32Array.BYTES_PER_ELEMENT
+@BuiltInProperty:Float32Array.prototype.constructor
+@BuiltInProperty:Float32Array.prototype.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TFloat32Array.constructor
+@BuiltInProperty: $R::TFloat32Array.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TFloat32Array.__defineGetter__
+@BuiltInProperty: $R::TFloat32Array.__defineSetter__
+@BuiltInProperty: $R::TFloat32Array.hasOwnProperty
+@BuiltInProperty: $R::TFloat32Array.__lookupGetter__
+@BuiltInProperty: $R::TFloat32Array.__lookupSetter__
+@BuiltInProperty: $R::TFloat32Array.isPrototypeOf
+@BuiltInProperty: $R::TFloat32Array.propertyIsEnumerable
+@BuiltInProperty: $R::TFloat32Array.toString
+@BuiltInProperty: $R::TFloat32Array.valueOf
+@BuiltInProperty: $R::TFloat32Array.__proto__
+@BuiltInProperty: $R::TFloat32Array.toLocaleString
+
+@BuiltInProperty:Float64Array.length
+@BuiltInProperty:Float64Array.name
+@BuiltInProperty:Float64Array.prototype
+@BuiltInProperty:Float64Array.BYTES_PER_ELEMENT
+@BuiltInProperty:Float64Array.prototype.constructor
+@BuiltInProperty:Float64Array.prototype.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TFloat64Array.constructor
+@BuiltInProperty: $R::TFloat64Array.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TFloat64Array.__defineGetter__
+@BuiltInProperty: $R::TFloat64Array.__defineSetter__
+@BuiltInProperty: $R::TFloat64Array.hasOwnProperty
+@BuiltInProperty: $R::TFloat64Array.__lookupGetter__
+@BuiltInProperty: $R::TFloat64Array.__lookupSetter__
+@BuiltInProperty: $R::TFloat64Array.isPrototypeOf
+@BuiltInProperty: $R::TFloat64Array.propertyIsEnumerable
+@BuiltInProperty: $R::TFloat64Array.toString
+@BuiltInProperty: $R::TFloat64Array.valueOf
+@BuiltInProperty: $R::TFloat64Array.__proto__
+@BuiltInProperty: $R::TFloat64Array.toLocaleString
+
+@BuiltInProperty:Uint8ClampedArray.length
+@BuiltInProperty:Uint8ClampedArray.name
+@BuiltInProperty:Uint8ClampedArray.prototype
+@BuiltInProperty:Uint8ClampedArray.BYTES_PER_ELEMENT
+@BuiltInProperty:Uint8ClampedArray.prototype.constructor
+@BuiltInProperty:Uint8ClampedArray.prototype.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TUint8ClampedArray.constructor
+@BuiltInProperty: $R::TUint8ClampedArray.BYTES_PER_ELEMENT
+@BuiltInProperty: $R::TUint8ClampedArray.__defineGetter__
+@BuiltInProperty: $R::TUint8ClampedArray.__defineSetter__
+@BuiltInProperty: $R::TUint8ClampedArray.hasOwnProperty
+@BuiltInProperty: $R::TUint8ClampedArray.__lookupGetter__
+@BuiltInProperty: $R::TUint8ClampedArray.__lookupSetter__
+@BuiltInProperty: $R::TUint8ClampedArray.isPrototypeOf
+@BuiltInProperty: $R::TUint8ClampedArray.propertyIsEnumerable
+@BuiltInProperty: $R::TUint8ClampedArray.toString
+@BuiltInProperty: $R::TUint8ClampedArray.valueOf
+@BuiltInProperty: $R::TUint8ClampedArray.__proto__
+@BuiltInProperty: $R::TUint8ClampedArray.toLocaleString
+
+#@BuiltInProperty:BigUint64Array
+#@BuiltInProperty:BigUint64Array.length
+#@BuiltInProperty:BigUint64Array.name
+#@BuiltInProperty:BigUint64Array.prototype
+#@BuiltInProperty:BigUint64Array.BYTES_PER_ELEMENT
+#@BuiltInProperty:BigUint64Array.prototype.constructor
+#@BuiltInProperty:BigUint64Array.prototype.BYTES_PER_ELEMENT
+#@BuiltInProperty:BigInt64Array
+#@BuiltInProperty:BigInt64Array.length
+#@BuiltInProperty:BigInt64Array.name
+#@BuiltInProperty:BigInt64Array.prototype
+#@BuiltInProperty:BigInt64Array.BYTES_PER_ELEMENT
+#@BuiltInProperty:BigInt64Array.prototype.constructor
+#@BuiltInProperty:BigInt64Array.prototype.BYTES_PER_ELEMENT
+
+@BuiltInProperty: DataView.length
+@BuiltInProperty: DataView.name
+@BuiltInProperty: DataView.prototype
+@BuiltInProperty: DataView.prototype.constructor
+@BuiltInProperty: DataView.prototype.buffer
+@BuiltInProperty: DataView.prototype.byteLength
+@BuiltInProperty: DataView.prototype.byteOffset
+@BuiltInProperty: DataView.prototype.getInt8
+@BuiltInProperty: DataView.prototype.setInt8
+@BuiltInProperty: DataView.prototype.getUint8
+@BuiltInProperty: DataView.prototype.setUint8
+@BuiltInProperty: DataView.prototype.getInt16
+@BuiltInProperty: DataView.prototype.setInt16
+@BuiltInProperty: DataView.prototype.getUint16
+@BuiltInProperty: DataView.prototype.setUint16
+@BuiltInProperty: DataView.prototype.getInt32
+@BuiltInProperty: DataView.prototype.setInt32
+@BuiltInProperty: DataView.prototype.getUint32
+@BuiltInProperty: DataView.prototype.setUint32
+@BuiltInProperty: DataView.prototype.getFloat32
+@BuiltInProperty: DataView.prototype.setFloat32
+@BuiltInProperty: DataView.prototype.getFloat64
+@BuiltInProperty: DataView.prototype.setFloat64
+#@BuiltInProperty: DataView.prototype.getBigInt64
+#@BuiltInProperty: DataView.prototype.setBigInt64
+#@BuiltInProperty: DataView.prototype.getBigUint64
+#@BuiltInProperty: DataView.prototype.setBigUint64
+@BuiltInProperty: $R::TDataView.constructor
+@BuiltInProperty: $R::TDataView.buffer
+@BuiltInProperty: $R::TDataView.byteLength
+@BuiltInProperty: $R::TDataView.byteOffset
+@BuiltInProperty: $R::TDataView.getInt8
+@BuiltInProperty: $R::TDataView.setInt8
+@BuiltInProperty: $R::TDataView.getUint8
+@BuiltInProperty: $R::TDataView.setUint8
+@BuiltInProperty: $R::TDataView.getInt16
+@BuiltInProperty: $R::TDataView.setInt16
+@BuiltInProperty: $R::TDataView.getUint16
+@BuiltInProperty: $R::TDataView.setUint16
+@BuiltInProperty: $R::TDataView.getInt32
+@BuiltInProperty: $R::TDataView.setInt32
+@BuiltInProperty: $R::TDataView.getUint32
+@BuiltInProperty: $R::TDataView.setUint32
+@BuiltInProperty: $R::TDataView.getFloat32
+@BuiltInProperty: $R::TDataView.setFloat32
+@BuiltInProperty: $R::TDataView.getFloat64
+@BuiltInProperty: $R::TDataView.setFloat64
+@BuiltInProperty: $R::TDataView.__defineGetter__
+@BuiltInProperty: $R::TDataView.__defineSetter__
+@BuiltInProperty: $R::TDataView.hasOwnProperty
+@BuiltInProperty: $R::TDataView.__lookupGetter__
+@BuiltInProperty: $R::TDataView.__lookupSetter__
+@BuiltInProperty: $R::TDataView.isPrototypeOf
+@BuiltInProperty: $R::TDataView.propertyIsEnumerable
+@BuiltInProperty: $R::TDataView.toString
+@BuiltInProperty: $R::TDataView.valueOf
+@BuiltInProperty: $R::TDataView.__proto__
+@BuiltInProperty: $R::TDataView.toLocaleString
+
+@BuiltInProperty: Map.length
+@BuiltInProperty: Map.name
+@BuiltInProperty: Map.prototype
+@BuiltInProperty: Map.prototype.constructor
+@BuiltInProperty: Map.prototype.get
+@BuiltInProperty: Map.prototype.set
+@BuiltInProperty: Map.prototype.has
+@BuiltInProperty: Map.prototype.delete
+@BuiltInProperty: Map.prototype.clear
+@BuiltInProperty: Map.prototype.entries
+@BuiltInProperty: Map.prototype.forEach
+@BuiltInProperty: Map.prototype.keys
+@BuiltInProperty: Map.prototype.size
+@BuiltInProperty: Map.prototype.values
+@BuiltInProperty: $R::TMap.constructor
+@BuiltInProperty: $R::TMap.get
+@BuiltInProperty: $R::TMap.set
+@BuiltInProperty: $R::TMap.has
+@BuiltInProperty: $R::TMap.delete
+@BuiltInProperty: $R::TMap.clear
+@BuiltInProperty: $R::TMap.entries
+@BuiltInProperty: $R::TMap.forEach
+@BuiltInProperty: $R::TMap.keys
+@BuiltInProperty: $R::TMap.size
+@BuiltInProperty: $R::TMap.values
+@BuiltInProperty: $R::TMap.__defineGetter__
+@BuiltInProperty: $R::TMap.__defineSetter__
+@BuiltInProperty: $R::TMap.hasOwnProperty
+@BuiltInProperty: $R::TMap.__lookupGetter__
+@BuiltInProperty: $R::TMap.__lookupSetter__
+@BuiltInProperty: $R::TMap.isPrototypeOf
+@BuiltInProperty: $R::TMap.propertyIsEnumerable
+@BuiltInProperty: $R::TMap.toString
+@BuiltInProperty: $R::TMap.valueOf
+@BuiltInProperty: $R::TMap.__proto__
+@BuiltInProperty: $R::TMap.toLocaleString
+
+@BuiltInProperty: Set.length
+@BuiltInProperty: Set.name
+@BuiltInProperty: Set.prototype
+@BuiltInProperty: Set.prototype.constructor
+@BuiltInProperty: Set.prototype.has
+@BuiltInProperty: Set.prototype.add
+@BuiltInProperty: Set.prototype.delete
+@BuiltInProperty: Set.prototype.clear
+@BuiltInProperty: Set.prototype.entries
+@BuiltInProperty: Set.prototype.forEach
+@BuiltInProperty: Set.prototype.size
+@BuiltInProperty: Set.prototype.values
+@BuiltInProperty: Set.prototype.keys
+@BuiltInProperty: $R::TSet.constructor
+@BuiltInProperty: $R::TSet.has
+@BuiltInProperty: $R::TSet.add
+@BuiltInProperty: $R::TSet.delete
+@BuiltInProperty: $R::TSet.clear
+@BuiltInProperty: $R::TSet.entries
+@BuiltInProperty: $R::TSet.forEach
+@BuiltInProperty: $R::TSet.size
+@BuiltInProperty: $R::TSet.values
+@BuiltInProperty: $R::TSet.keys
+@BuiltInProperty: $R::TSet.__defineGetter__
+@BuiltInProperty: $R::TSet.__defineSetter__
+@BuiltInProperty: $R::TSet.hasOwnProperty
+@BuiltInProperty: $R::TSet.__lookupGetter__
+@BuiltInProperty: $R::TSet.__lookupSetter__
+@BuiltInProperty: $R::TSet.isPrototypeOf
+@BuiltInProperty: $R::TSet.propertyIsEnumerable
+@BuiltInProperty: $R::TSet.toString
+@BuiltInProperty: $R::TSet.valueOf
+@BuiltInProperty: $R::TSet.__proto__
+@BuiltInProperty: $R::TSet.toLocaleString
+
+@BuiltInProperty: WeakMap.length
+@BuiltInProperty: WeakMap.name
+@BuiltInProperty: WeakMap.prototype
+@BuiltInProperty: WeakMap.prototype.constructor
+@BuiltInProperty: WeakMap.prototype.delete
+@BuiltInProperty: WeakMap.prototype.get
+@BuiltInProperty: WeakMap.prototype.has
+@BuiltInProperty: WeakMap.prototype.set
+@BuiltInProperty: $R::TWeakMap.constructor
+@BuiltInProperty: $R::TWeakMap.delete
+@BuiltInProperty: $R::TWeakMap.get
+@BuiltInProperty: $R::TWeakMap.has
+@BuiltInProperty: $R::TWeakMap.set
+@BuiltInProperty: $R::TWeakMap.__defineGetter__
+@BuiltInProperty: $R::TWeakMap.__defineSetter__
+@BuiltInProperty: $R::TWeakMap.hasOwnProperty
+@BuiltInProperty: $R::TWeakMap.__lookupGetter__
+@BuiltInProperty: $R::TWeakMap.__lookupSetter__
+@BuiltInProperty: $R::TWeakMap.isPrototypeOf
+@BuiltInProperty: $R::TWeakMap.propertyIsEnumerable
+@BuiltInProperty: $R::TWeakMap.toString
+@BuiltInProperty: $R::TWeakMap.valueOf
+@BuiltInProperty: $R::TWeakMap.__proto__
+@BuiltInProperty: $R::TWeakMap.toLocaleString
+
+@BuiltInProperty: WeakSet.length
+@BuiltInProperty: WeakSet.name
+@BuiltInProperty: WeakSet.prototype
+@BuiltInProperty: WeakSet.prototype.constructor
+@BuiltInProperty: WeakSet.prototype.delete
+@BuiltInProperty: WeakSet.prototype.has
+@BuiltInProperty: WeakSet.prototype.add
+@BuiltInProperty: $R::TWeakSet.constructor
+@BuiltInProperty: $R::TWeakSet.delete
+@BuiltInProperty: $R::TWeakSet.has
+@BuiltInProperty: $R::TWeakSet.add
+@BuiltInProperty: $R::TWeakSet.__defineGetter__
+@BuiltInProperty: $R::TWeakSet.__defineSetter__
+@BuiltInProperty: $R::TWeakSet.hasOwnProperty
+@BuiltInProperty: $R::TWeakSet.__lookupGetter__
+@BuiltInProperty: $R::TWeakSet.__lookupSetter__
+@BuiltInProperty: $R::TWeakSet.isPrototypeOf
+@BuiltInProperty: $R::TWeakSet.propertyIsEnumerable
+@BuiltInProperty: $R::TWeakSet.toString
+@BuiltInProperty: $R::TWeakSet.valueOf
+@BuiltInProperty: $R::TWeakSet.__proto__
+@BuiltInProperty: $R::TWeakSet.toLocaleString
+
+@BuiltInProperty: Proxy.length
+@BuiltInProperty: Proxy.name
+@BuiltInProperty: Proxy.revocable
+@BuiltInProperty: $R::TProxy.__defineGetter__
+@BuiltInProperty: $R::TProxy.__defineSetter__
+@BuiltInProperty: $R::TProxy.hasOwnProperty
+@BuiltInProperty: $R::TProxy.__lookupGetter__
+@BuiltInProperty: $R::TProxy.__lookupSetter__
+@BuiltInProperty: $R::TProxy.isPrototypeOf
+@BuiltInProperty: $R::TProxy.propertyIsEnumerable
+@BuiltInProperty: $R::TProxy.toString
+@BuiltInProperty: $R::TProxy.valueOf
+@BuiltInProperty: $R::TProxy.__proto__
+@BuiltInProperty: $R::TProxy.toLocaleString
+
+@BuiltInProperty: SharedArrayBuffer.length
+@BuiltInProperty: SharedArrayBuffer.name
+@BuiltInProperty: SharedArrayBuffer.prototype
+@BuiltInProperty: SharedArrayBuffer.prototype.constructor
+@BuiltInProperty: SharedArrayBuffer.prototype.byteLength
+@BuiltInProperty: SharedArrayBuffer.prototype.slice
+@BuiltInProperty: $R::TSharedArrayBuffer.constructor
+@BuiltInProperty: $R::TSharedArrayBuffer.byteLength
+@BuiltInProperty: $R::TSharedArrayBuffer.slice
+@BuiltInProperty: $R::TSharedArrayBuffer.__defineGetter__
+@BuiltInProperty: $R::TSharedArrayBuffer.__defineSetter__
+@BuiltInProperty: $R::TSharedArrayBuffer.hasOwnProperty
+@BuiltInProperty: $R::TSharedArrayBuffer.__lookupGetter__
+@BuiltInProperty: $R::TSharedArrayBuffer.__lookupSetter__
+@BuiltInProperty: $R::TSharedArrayBuffer.isPrototypeOf
+@BuiltInProperty: $R::TSharedArrayBuffer.propertyIsEnumerable
+@BuiltInProperty: $R::TSharedArrayBuffer.toString
+@BuiltInProperty: $R::TSharedArrayBuffer.valueOf
+@BuiltInProperty: $R::TSharedArrayBuffer.__proto__
+@BuiltInProperty: $R::TSharedArrayBuffer.toLocaleString
+
+#@BuiltInProperty:BigInt
+#@BuiltInProperty:BigInt.length
+#@BuiltInProperty:BigInt.name
+#@BuiltInProperty:BigInt.prototype
+#@BuiltInProperty:BigInt.asUintN
+#@BuiltInProperty:BigInt.asIntN
+#@BuiltInProperty:BigInt.prototype.constructor
+#@BuiltInProperty:BigInt.prototype.toLocaleString
+#@BuiltInProperty:BigInt.prototype.toString
+#@BuiltInProperty:BigInt.prototype.valueOf
+
+@BuiltInFunction: Object.assign
+@BuiltInFunction: Object.getOwnPropertyDescriptor
+@BuiltInFunction: Object.getOwnPropertyDescriptors
+@BuiltInFunction: Object.getOwnPropertyNames
+@BuiltInFunction: Object.getOwnPropertySymbols
+@BuiltInFunction: Object.is
+@BuiltInFunction: Object.preventExtensions
+@BuiltInFunction: Object.seal
+@BuiltInFunction: Object.create
+@BuiltInFunction: Object.defineProperties
+@BuiltInFunction: Object.defineProperty
+@BuiltInFunction: Object.freeze
+@BuiltInFunction: Object.getPrototypeOf
+@BuiltInFunction: Object.setPrototypeOf
+@BuiltInFunction: Object.isExtensible
+@BuiltInFunction: Object.isFrozen
+@BuiltInFunction: Object.isSealed
+@BuiltInFunction: Object.keys
+@BuiltInFunction: Object.entries
+@BuiltInFunction: Object.values
+@BuiltInFunction: Object.prototype.__defineGetter__.call
+@BuiltInFunction: Object.prototype.__defineSetter__.call
+@BuiltInFunction: Object.prototype.hasOwnProperty.call
+@BuiltInFunction: Object.prototype.__lookupGetter__.call
+@BuiltInFunction: Object.prototype.__lookupSetter__.call
+@BuiltInFunction: Object.prototype.isPrototypeOf.call
+@BuiltInFunction: Object.prototype.propertyIsEnumerable.call
+@BuiltInFunction: Object.prototype.toString.call
+@BuiltInFunction: Object.prototype.valueOf.call
+@BuiltInFunction: Object.prototype.toLocaleString.call
+@BuiltInFunction: $R::TObject.constructor
+@BuiltInFunction: $R::TObject.__defineGetter__
+@BuiltInFunction: $R::TObject.__defineSetter__
+@BuiltInFunction: $R::TObject.hasOwnProperty
+@BuiltInFunction: $R::TObject.__lookupGetter__
+@BuiltInFunction: $R::TObject.__lookupSetter__
+@BuiltInFunction: $R::TObject.isPrototypeOf
+@BuiltInFunction: $R::TObject.propertyIsEnumerable
+@BuiltInFunction: $R::TObject.toString
+@BuiltInFunction: $R::TObject.valueOf
+
+
+@BuiltInFunction: Function.prototype.apply.call
+@BuiltInFunction: Function.prototype.bind.call
+@BuiltInFunction: Function.prototype.call
+@BuiltInFunction: Function.prototype.toString.call
+@BuiltInFunction: $R::TFunction.apply
+@BuiltInFunction: $R::TFunction.bind
+@BuiltInFunction: $R::TFunction.call
+@BuiltInFunction: $R::TFunction.constructor
+@BuiltInFunction: $R::TFunction.__defineGetter__
+@BuiltInFunction: $R::TFunction.__defineSetter__
+@BuiltInFunction: $R::TFunction.hasOwnProperty
+@BuiltInFunction: $R::TFunction.__lookupGetter__
+@BuiltInFunction: $R::TFunction.__lookupSetter__
+@BuiltInFunction: $R::TFunction.isPrototypeOf
+@BuiltInFunction: $R::TFunction.propertyIsEnumerable
+@BuiltInFunction: $R::TFunction.toString
+@BuiltInFunction: $R::TFunction.valueOf
+
+@BuiltInFunction: Array.isArray
+@BuiltInFunction: Array.from
+@BuiltInFunction: Array.of
+@BuiltInFunction: Array.prototype.concat.call
+@BuiltInFunction: Array.prototype.find.call
+@BuiltInFunction: Array.prototype.findIndex.call
+@BuiltInFunction: Array.prototype.pop.call
+@BuiltInFunction: Array.prototype.push.call
+@BuiltInFunction: Array.prototype.shift.call
+@BuiltInFunction: Array.prototype.unshift.call
+@BuiltInFunction: Array.prototype.slice.call
+@BuiltInFunction: Array.prototype.splice.call
+@BuiltInFunction: Array.prototype.includes.call
+@BuiltInFunction: Array.prototype.indexOf.call
+@BuiltInFunction: Array.prototype.keys.call
+@BuiltInFunction: Array.prototype.entries.call
+@BuiltInFunction: Array.prototype.forEach.call
+@BuiltInFunction: Array.prototype.filter.call
+@BuiltInFunction: Array.prototype.map.call
+@BuiltInFunction: Array.prototype.every.call
+@BuiltInFunction: Array.prototype.some.call
+@BuiltInFunction: Array.prototype.reduce.call
+@BuiltInFunction: Array.prototype.reduceRight.call
+@BuiltInFunction: Array.prototype.toString.call
+@BuiltInFunction: Array.prototype.toLocaleString.call
+@BuiltInFunction: Array.prototype.join.call
+@BuiltInFunction: Array.prototype.reverse.call
+@BuiltInFunction: Array.prototype.sort.call
+@BuiltInFunction: Array.prototype.lastIndexOf.call
+@BuiltInFunction: Array.prototype.copyWithin.call
+@BuiltInFunction: Array.prototype.fill.call
+@BuiltInFunction: Array.prototype.values.call
+@BuiltInFunction: $R::TArray.concat
+@BuiltInFunction: $R::TArray.find
+@BuiltInFunction: $R::TArray.findIndex
+@BuiltInFunction: $R::TArray.pop
+@BuiltInFunction: $R::TArray.push
+@BuiltInFunction: $R::TArray.shift
+@BuiltInFunction: $R::TArray.unshift
+@BuiltInFunction: $R::TArray.slice
+@BuiltInFunction: $R::TArray.splice
+@BuiltInFunction: $R::TArray.includes
+@BuiltInFunction: $R::TArray.indexOf
+@BuiltInFunction: $R::TArray.keys
+@BuiltInFunction: $R::TArray.entries
+@BuiltInFunction: $R::TArray.forEach
+@BuiltInFunction: $R::TArray.filter
+@BuiltInFunction: $R::TArray.map
+@BuiltInFunction: $R::TArray.every
+@BuiltInFunction: $R::TArray.some
+@BuiltInFunction: $R::TArray.reduce
+@BuiltInFunction: $R::TArray.reduceRight
+@BuiltInFunction: $R::TArray.toString
+@BuiltInFunction: $R::TArray.toLocaleString
+@BuiltInFunction: $R::TArray.join
+@BuiltInFunction: $R::TArray.reverse
+@BuiltInFunction: $R::TArray.sort
+@BuiltInFunction: $R::TArray.lastIndexOf
+@BuiltInFunction: $R::TArray.copyWithin
+@BuiltInFunction: $R::TArray.fill
+@BuiltInFunction: $R::TArray.values
+@BuiltInFunction: $R::TArray.constructor
+@BuiltInFunction: $R::TArray.__defineGetter__
+@BuiltInFunction: $R::TArray.__defineSetter__
+@BuiltInFunction: $R::TArray.hasOwnProperty
+@BuiltInFunction: $R::TArray.__lookupGetter__
+@BuiltInFunction: $R::TArray.__lookupSetter__
+@BuiltInFunction: $R::TArray.isPrototypeOf
+@BuiltInFunction: $R::TArray.propertyIsEnumerable
+@BuiltInFunction: $R::TArray.toString
+@BuiltInFunction: $R::TArray.valueOf
+
+@BuiltInFunction: Number.isFinite
+@BuiltInFunction: Number.isInteger
+@BuiltInFunction: Number.isNaN
+@BuiltInFunction: Number.isSafeInteger
+@BuiltInFunction: Number.parseFloat
+@BuiltInFunction: Number.parseInt
+@BuiltInFunction: Number.prototype.toExponential.call
+@BuiltInFunction: Number.prototype.toFixed.call
+@BuiltInFunction: Number.prototype.toPrecision.call
+@BuiltInFunction: Number.prototype.toString.call
+@BuiltInFunction: Number.prototype.valueOf.call
+@BuiltInFunction: Number.prototype.toLocaleString.call
+@BuiltInFunction: $R::TNumber.toExponential
+@BuiltInFunction: $R::TNumber.toFixed
+@BuiltInFunction: $R::TNumber.toPrecision
+@BuiltInFunction: $R::TNumber.toString
+@BuiltInFunction: $R::TNumber.valueOf
+@BuiltInFunction: $R::TNumber.toLocaleString
+@BuiltInFunction: $R::TNumber.constructor
+@BuiltInFunction: $R::TNumber.__defineGetter__
+@BuiltInFunction: $R::TNumber.__defineSetter__
+@BuiltInFunction: $R::TNumber.hasOwnProperty
+@BuiltInFunction: $R::TNumber.__lookupGetter__
+@BuiltInFunction: $R::TNumber.__lookupSetter__
+@BuiltInFunction: $R::TNumber.isPrototypeOf
+@BuiltInFunction: $R::TNumber.propertyIsEnumerable
+
+@BuiltInFunction: Boolean.prototype.toString.call
+@BuiltInFunction: Boolean.prototype.valueOf.call
+@BuiltInFunction: $R::TBoolean.toString
+@BuiltInFunction: $R::TBoolean.valueOf
+@BuiltInFunction: $R::TBoolean.constructor
+@BuiltInFunction: $R::TBoolean.__defineGetter__
+@BuiltInFunction: $R::TBoolean.__defineSetter__
+@BuiltInFunction: $R::TBoolean.hasOwnProperty
+@BuiltInFunction: $R::TBoolean.__lookupGetter__
+@BuiltInFunction: $R::TBoolean.__lookupSetter__
+@BuiltInFunction: $R::TBoolean.isPrototypeOf
+@BuiltInFunction: $R::TBoolean.propertyIsEnumerable
+
+@BuiltInFunction: String.fromCharCode
+@BuiltInFunction: String.fromCodePoint
+@BuiltInFunction: String.raw
+@BuiltInFunction: String.prototype.anchor.call
+@BuiltInFunction: String.prototype.big.call
+@BuiltInFunction: String.prototype.blink.call
+@BuiltInFunction: String.prototype.bold.call
+@BuiltInFunction: String.prototype.charAt.call
+@BuiltInFunction: String.prototype.charCodeAt.call
+@BuiltInFunction: String.prototype.codePointAt.call
+@BuiltInFunction: String.prototype.concat.call
+@BuiltInFunction: String.prototype.endsWith.call
+@BuiltInFunction: String.prototype.fontcolor.call
+@BuiltInFunction: String.prototype.fontsize.call
+@BuiltInFunction: String.prototype.fixed.call
+@BuiltInFunction: String.prototype.includes.call
+@BuiltInFunction: String.prototype.indexOf.call
+@BuiltInFunction: String.prototype.italics.call
+@BuiltInFunction: String.prototype.lastIndexOf.call
+@BuiltInFunction: String.prototype.link.call
+@BuiltInFunction: String.prototype.localeCompare.call
+@BuiltInFunction: String.prototype.match.call
+@BuiltInFunction: String.prototype.normalize.call
+@BuiltInFunction: String.prototype.padEnd.call
+@BuiltInFunction: String.prototype.padStart.call
+@BuiltInFunction: String.prototype.repeat.call
+@BuiltInFunction: String.prototype.replace.call
+@BuiltInFunction: String.prototype.search.call
+@BuiltInFunction: String.prototype.slice.call
+@BuiltInFunction: String.prototype.small.call
+@BuiltInFunction: String.prototype.split.call
+@BuiltInFunction: String.prototype.strike.call
+@BuiltInFunction: String.prototype.sub.call
+@BuiltInFunction: String.prototype.substr.call
+@BuiltInFunction: String.prototype.substring.call
+@BuiltInFunction: String.prototype.sup.call
+@BuiltInFunction: String.prototype.startsWith.call
+@BuiltInFunction: String.prototype.toString.call
+@BuiltInFunction: String.prototype.trim.call
+@BuiltInFunction: String.prototype.trimLeft.call
+@BuiltInFunction: String.prototype.trimRight.call
+@BuiltInFunction: String.prototype.toLowerCase.call
+@BuiltInFunction: String.prototype.toUpperCase.call
+@BuiltInFunction: String.prototype.valueOf.call
+@BuiltInFunction: String.prototype.toLocaleLowerCase.call
+@BuiltInFunction: String.prototype.toLocaleUpperCase.call
+@BuiltInFunction: String.prototype.trimStart.call
+@BuiltInFunction: String.prototype.trimEnd.call
+@BuiltInFunction: $R::TString.anchor
+@BuiltInFunction: $R::TString.big
+@BuiltInFunction: $R::TString.blink
+@BuiltInFunction: $R::TString.bold
+@BuiltInFunction: $R::TString.charAt
+@BuiltInFunction: $R::TString.charCodeAt
+@BuiltInFunction: $R::TString.codePointAt
+@BuiltInFunction: $R::TString.concat
+@BuiltInFunction: $R::TString.endsWith
+@BuiltInFunction: $R::TString.fontcolor
+@BuiltInFunction: $R::TString.fontsize
+@BuiltInFunction: $R::TString.fixed
+@BuiltInFunction: $R::TString.includes
+@BuiltInFunction: $R::TString.indexOf
+@BuiltInFunction: $R::TString.italics
+@BuiltInFunction: $R::TString.lastIndexOf
+@BuiltInFunction: $R::TString.link
+@BuiltInFunction: $R::TString.localeCompare
+@BuiltInFunction: $R::TString.match
+@BuiltInFunction: $R::TString.normalize
+@BuiltInFunction: $R::TString.padEnd
+@BuiltInFunction: $R::TString.padStart
+@BuiltInFunction: $R::TString.repeat
+@BuiltInFunction: $R::TString.replace
+@BuiltInFunction: $R::TString.search
+@BuiltInFunction: $R::TString.slice
+@BuiltInFunction: $R::TString.small
+@BuiltInFunction: $R::TString.split
+@BuiltInFunction: $R::TString.strike
+@BuiltInFunction: $R::TString.sub
+@BuiltInFunction: $R::TString.substr
+@BuiltInFunction: $R::TString.substring
+@BuiltInFunction: $R::TString.sup
+@BuiltInFunction: $R::TString.startsWith
+@BuiltInFunction: $R::TString.toString
+@BuiltInFunction: $R::TString.trim
+@BuiltInFunction: $R::TString.trimLeft
+@BuiltInFunction: $R::TString.trimRight
+@BuiltInFunction: $R::TString.toLowerCase
+@BuiltInFunction: $R::TString.toUpperCase
+@BuiltInFunction: $R::TString.valueOf
+@BuiltInFunction: $R::TString.toLocaleLowerCase
+@BuiltInFunction: $R::TString.toLocaleUpperCase
+@BuiltInFunction: $R::TString.trimStart
+@BuiltInFunction: $R::TString.trimEnd
+@BuiltInFunction: $R::TString.constructor
+@BuiltInFunction: $R::TString.__defineGetter__
+@BuiltInFunction: $R::TString.__defineSetter__
+@BuiltInFunction: $R::TString.hasOwnProperty
+@BuiltInFunction: $R::TString.__lookupGetter__
+@BuiltInFunction: $R::TString.__lookupSetter__
+@BuiltInFunction: $R::TString.isPrototypeOf
+@BuiltInFunction: $R::TString.propertyIsEnumerable
+
+@BuiltInFunction: Symbol.for
+@BuiltInFunction: Symbol.keyFor
+@BuiltInFunction: Symbol.prototype.toString.call
+@BuiltInFunction: Symbol.prototype.valueOf.call
+@BuiltInFunction: $R::TSymbol.toString
+@BuiltInFunction: $R::TSymbol.valueOf
+@BuiltInFunction: $R::TSymbol.constructor
+@BuiltInFunction: $R::TSymbol.__defineGetter__
+@BuiltInFunction: $R::TSymbol.__defineSetter__
+@BuiltInFunction: $R::TSymbol.hasOwnProperty
+@BuiltInFunction: $R::TSymbol.__lookupGetter__
+@BuiltInFunction: $R::TSymbol.__lookupSetter__
+@BuiltInFunction: $R::TSymbol.isPrototypeOf
+@BuiltInFunction: $R::TSymbol.propertyIsEnumerable
+
+@BuiltInFunction: Date.now
+@BuiltInFunction: Date.parse
+@BuiltInFunction: Date.UTC
+@BuiltInFunction: Date.prototype.toString.call
+@BuiltInFunction: Date.prototype.toDateString.call
+@BuiltInFunction: Date.prototype.toTimeString.call
+@BuiltInFunction: Date.prototype.toISOString.call
+@BuiltInFunction: Date.prototype.toUTCString.call
+@BuiltInFunction: Date.prototype.toGMTString.call
+@BuiltInFunction: Date.prototype.getDate.call
+@BuiltInFunction: Date.prototype.setDate.call
+@BuiltInFunction: Date.prototype.getDay.call
+@BuiltInFunction: Date.prototype.getFullYear.call
+@BuiltInFunction: Date.prototype.setFullYear.call
+@BuiltInFunction: Date.prototype.getHours.call
+@BuiltInFunction: Date.prototype.setHours.call
+@BuiltInFunction: Date.prototype.getMilliseconds.call
+@BuiltInFunction: Date.prototype.setMilliseconds.call
+@BuiltInFunction: Date.prototype.getMinutes.call
+@BuiltInFunction: Date.prototype.setMinutes.call
+@BuiltInFunction: Date.prototype.getMonth.call
+@BuiltInFunction: Date.prototype.setMonth.call
+@BuiltInFunction: Date.prototype.getSeconds.call
+@BuiltInFunction: Date.prototype.setSeconds.call
+@BuiltInFunction: Date.prototype.getTime.call
+@BuiltInFunction: Date.prototype.setTime.call
+@BuiltInFunction: Date.prototype.getTimezoneOffset.call
+@BuiltInFunction: Date.prototype.getUTCDate.call
+@BuiltInFunction: Date.prototype.setUTCDate.call
+@BuiltInFunction: Date.prototype.getUTCDay.call
+@BuiltInFunction: Date.prototype.getUTCFullYear.call
+@BuiltInFunction: Date.prototype.setUTCFullYear.call
+@BuiltInFunction: Date.prototype.getUTCHours.call
+@BuiltInFunction: Date.prototype.setUTCHours.call
+@BuiltInFunction: Date.prototype.getUTCMilliseconds.call
+@BuiltInFunction: Date.prototype.setUTCMilliseconds.call
+@BuiltInFunction: Date.prototype.getUTCMinutes.call
+@BuiltInFunction: Date.prototype.setUTCMinutes.call
+@BuiltInFunction: Date.prototype.getUTCMonth.call
+@BuiltInFunction: Date.prototype.setUTCMonth.call
+@BuiltInFunction: Date.prototype.getUTCSeconds.call
+@BuiltInFunction: Date.prototype.setUTCSeconds.call
+@BuiltInFunction: Date.prototype.valueOf.call
+@BuiltInFunction: Date.prototype.getYear.call
+@BuiltInFunction: Date.prototype.setYear.call
+@BuiltInFunction: Date.prototype.toJSON.call
+@BuiltInFunction: Date.prototype.toLocaleString.call
+@BuiltInFunction: Date.prototype.toLocaleDateString.call
+@BuiltInFunction: Date.prototype.toLocaleTimeString.call
+@BuiltInFunction: $R::TDate.toString
+@BuiltInFunction: $R::TDate.toDateString
+@BuiltInFunction: $R::TDate.toTimeString
+@BuiltInFunction: $R::TDate.toISOString
+@BuiltInFunction: $R::TDate.toUTCString
+@BuiltInFunction: $R::TDate.toGMTString
+@BuiltInFunction: $R::TDate.getDate
+@BuiltInFunction: $R::TDate.setDate
+@BuiltInFunction: $R::TDate.getDay
+@BuiltInFunction: $R::TDate.getFullYear
+@BuiltInFunction: $R::TDate.setFullYear
+@BuiltInFunction: $R::TDate.getHours
+@BuiltInFunction: $R::TDate.setHours
+@BuiltInFunction: $R::TDate.getMilliseconds
+@BuiltInFunction: $R::TDate.setMilliseconds
+@BuiltInFunction: $R::TDate.getMinutes
+@BuiltInFunction: $R::TDate.setMinutes
+@BuiltInFunction: $R::TDate.getMonth
+@BuiltInFunction: $R::TDate.setMonth
+@BuiltInFunction: $R::TDate.getSeconds
+@BuiltInFunction: $R::TDate.setSeconds
+@BuiltInFunction: $R::TDate.getTime
+@BuiltInFunction: $R::TDate.setTime
+@BuiltInFunction: $R::TDate.getTimezoneOffset
+@BuiltInFunction: $R::TDate.getUTCDate
+@BuiltInFunction: $R::TDate.setUTCDate
+@BuiltInFunction: $R::TDate.getUTCDay
+@BuiltInFunction: $R::TDate.getUTCFullYear
+@BuiltInFunction: $R::TDate.setUTCFullYear
+@BuiltInFunction: $R::TDate.getUTCHours
+@BuiltInFunction: $R::TDate.setUTCHours
+@BuiltInFunction: $R::TDate.getUTCMilliseconds
+@BuiltInFunction: $R::TDate.setUTCMilliseconds
+@BuiltInFunction: $R::TDate.getUTCMinutes
+@BuiltInFunction: $R::TDate.setUTCMinutes
+@BuiltInFunction: $R::TDate.getUTCMonth
+@BuiltInFunction: $R::TDate.setUTCMonth
+@BuiltInFunction: $R::TDate.getUTCSeconds
+@BuiltInFunction: $R::TDate.setUTCSeconds
+@BuiltInFunction: $R::TDate.valueOf
+@BuiltInFunction: $R::TDate.getYear
+@BuiltInFunction: $R::TDate.setYear
+@BuiltInFunction: $R::TDate.toJSON
+@BuiltInFunction: $R::TDate.toLocaleString
+@BuiltInFunction: $R::TDate.toLocaleDateString
+@BuiltInFunction: $R::TDate.toLocaleTimeString
+@BuiltInFunction: $R::TDate.constructor
+@BuiltInFunction: $R::TDate.__defineGetter__
+@BuiltInFunction: $R::TDate.__defineSetter__
+@BuiltInFunction: $R::TDate.hasOwnProperty
+@BuiltInFunction: $R::TDate.__lookupGetter__
+@BuiltInFunction: $R::TDate.__lookupSetter__
+@BuiltInFunction: $R::TDate.isPrototypeOf
+@BuiltInFunction: $R::TDate.propertyIsEnumerable
+
+@BuiltInFunction: Promise.all
+@BuiltInFunction: Promise.race
+@BuiltInFunction: Promise.resolve
+@BuiltInFunction: Promise.reject
+@BuiltInFunction: Promise.prototype.then.call
+@BuiltInFunction: Promise.prototype.catch.call
+@BuiltInFunction: Promise.prototype.finally.call
+@BuiltInFunction: $R::TPromise.then
+@BuiltInFunction: $R::TPromise.catch
+@BuiltInFunction: $R::TPromise.finally
+@BuiltInFunction: $R::TPromise.toString
+@BuiltInFunction: $R::TPromise.valueOf
+@BuiltInFunction: $R::TPromise.constructor
+@BuiltInFunction: $R::TPromise.__defineGetter__
+@BuiltInFunction: $R::TPromise.__defineSetter__
+@BuiltInFunction: $R::TPromise.hasOwnProperty
+@BuiltInFunction: $R::TPromise.__lookupGetter__
+@BuiltInFunction: $R::TPromise.__lookupSetter__
+@BuiltInFunction: $R::TPromise.isPrototypeOf
+@BuiltInFunction: $R::TPromise.propertyIsEnumerable
+
+@BuiltInFunction: RegExp.prototype.exec.call
+@BuiltInFunction: RegExp.prototype.compile.call
+@BuiltInFunction: RegExp.prototype.toString.call
+@BuiltInFunction: RegExp.prototype.test.call
+@BuiltInFunction: $R::TRegExp.exec
+@BuiltInFunction: $R::TRegExp.compile
+@BuiltInFunction: $R::TRegExp.toString
+@BuiltInFunction: $R::TRegExp.test
+@BuiltInFunction: $R::TRegExp.toString
+@BuiltInFunction: $R::TRegExp.valueOf
+@BuiltInFunction: $R::TRegExp.constructor
+@BuiltInFunction: $R::TRegExp.__defineGetter__
+@BuiltInFunction: $R::TRegExp.__defineSetter__
+@BuiltInFunction: $R::TRegExp.hasOwnProperty
+@BuiltInFunction: $R::TRegExp.__lookupGetter__
+@BuiltInFunction: $R::TRegExp.__lookupSetter__
+@BuiltInFunction: $R::TRegExp.isPrototypeOf
+@BuiltInFunction: $R::TRegExp.propertyIsEnumerable
+
+#@BuiltInFunction:Error
+#@BuiltInFunction:Error.captureStackTrace
+#@BuiltInFunction:Error.prototype.toString
+#@BuiltInFunction:EvalError
+#@BuiltInFunction:EvalError.prototype.toString
+#@BuiltInFunction:RangeError
+#@BuiltInFunction:RangeError.prototype.toString
+#@BuiltInFunction:ReferenceError
+#@BuiltInFunction:ReferenceError.prototype.toString
+#@BuiltInFunction:SyntaxError
+#@BuiltInFunction:SyntaxError.prototype.toString
+#@BuiltInFunction:TypeError
+#@BuiltInFunction:TypeError.prototype.toString
+#@BuiltInFunction:URIError
+#@BuiltInFunction:URIError.prototype.toString
+
+@BuiltInFunction: ArrayBuffer.isView
+@BuiltInFunction: ArrayBuffer.prototype.slice.call
+@BuiltInFunction: $R::TArrayBuffer.slice
+@BuiltInFunction: $R::TArrayBuffer.toString
+@BuiltInFunction: $R::TArrayBuffer.valueOf
+@BuiltInFunction: $R::TArrayBuffer.constructor
+@BuiltInFunction: $R::TArrayBuffer.__defineGetter__
+@BuiltInFunction: $R::TArrayBuffer.__defineSetter__
+@BuiltInFunction: $R::TArrayBuffer.hasOwnProperty
+@BuiltInFunction: $R::TArrayBuffer.__lookupGetter__
+@BuiltInFunction: $R::TArrayBuffer.__lookupSetter__
+@BuiltInFunction: $R::TArrayBuffer.isPrototypeOf
+@BuiltInFunction: $R::TArrayBuffer.propertyIsEnumerable
+
+@BuiltInFunction: DataView.prototype.getInt8.call
+@BuiltInFunction: DataView.prototype.setInt8.call
+@BuiltInFunction: DataView.prototype.getUint8.call
+@BuiltInFunction: DataView.prototype.setUint8.call
+@BuiltInFunction: DataView.prototype.getInt16.call
+@BuiltInFunction: DataView.prototype.setInt16.call
+@BuiltInFunction: DataView.prototype.getUint16.call
+@BuiltInFunction: DataView.prototype.setUint16.call
+@BuiltInFunction: DataView.prototype.getInt32.call
+@BuiltInFunction: DataView.prototype.setInt32.call
+@BuiltInFunction: DataView.prototype.getUint32.call
+@BuiltInFunction: DataView.prototype.setUint32.call
+@BuiltInFunction: DataView.prototype.getFloat32.call
+@BuiltInFunction: DataView.prototype.setFloat32.call
+@BuiltInFunction: DataView.prototype.getFloat64.call
+@BuiltInFunction: DataView.prototype.setFloat64.call
+#@BuiltInFunction: DataView.prototype.getBigInt64.call
+#@BuiltInFunction: DataView.prototype.setBigInt64.call
+#@BuiltInFunction: DataView.prototype.getBigUint64.call
+#@BuiltInFunction: DataView.prototype.setBigUint64.call
+@BuiltInFunction: $R::TDataView.getInt8
+@BuiltInFunction: $R::TDataView.setInt8
+@BuiltInFunction: $R::TDataView.getUint8
+@BuiltInFunction: $R::TDataView.setUint8
+@BuiltInFunction: $R::TDataView.getInt16
+@BuiltInFunction: $R::TDataView.setInt16
+@BuiltInFunction: $R::TDataView.getUint16
+@BuiltInFunction: $R::TDataView.setUint16
+@BuiltInFunction: $R::TDataView.getInt32
+@BuiltInFunction: $R::TDataView.setInt32
+@BuiltInFunction: $R::TDataView.getUint32
+@BuiltInFunction: $R::TDataView.setUint32
+@BuiltInFunction: $R::TDataView.getFloat32
+@BuiltInFunction: $R::TDataView.setFloat32
+@BuiltInFunction: $R::TDataView.getFloat64
+@BuiltInFunction: $R::TDataView.setFloat64
+@BuiltInFunction: $R::TDataView.toString
+@BuiltInFunction: $R::TDataView.valueOf
+@BuiltInFunction: $R::TDataView.constructor
+@BuiltInFunction: $R::TDataView.__defineGetter__
+@BuiltInFunction: $R::TDataView.__defineSetter__
+@BuiltInFunction: $R::TDataView.hasOwnProperty
+@BuiltInFunction: $R::TDataView.__lookupGetter__
+@BuiltInFunction: $R::TDataView.__lookupSetter__
+@BuiltInFunction: $R::TDataView.isPrototypeOf
+@BuiltInFunction: $R::TDataView.propertyIsEnumerable
+
+@BuiltInFunction: Map.prototype.get.call
+@BuiltInFunction: Map.prototype.set.call
+@BuiltInFunction: Map.prototype.has.call
+@BuiltInFunction: Map.prototype.delete.call
+@BuiltInFunction: Map.prototype.clear.call
+@BuiltInFunction: Map.prototype.entries.call
+@BuiltInFunction: Map.prototype.forEach.call
+@BuiltInFunction: Map.prototype.keys.call
+@BuiltInFunction: Map.prototype.values.call
+@BuiltInFunction: $R::TMap.get
+@BuiltInFunction: $R::TMap.set
+@BuiltInFunction: $R::TMap.has
+@BuiltInFunction: $R::TMap.delete
+@BuiltInFunction: $R::TMap.clear
+@BuiltInFunction: $R::TMap.entries
+@BuiltInFunction: $R::TMap.forEach
+@BuiltInFunction: $R::TMap.keys
+@BuiltInFunction: $R::TMap.values
+@BuiltInFunction: $R::TMap.toString
+@BuiltInFunction: $R::TMap.valueOf
+@BuiltInFunction: $R::TMap.constructor
+@BuiltInFunction: $R::TMap.__defineGetter__
+@BuiltInFunction: $R::TMap.__defineSetter__
+@BuiltInFunction: $R::TMap.hasOwnProperty
+@BuiltInFunction: $R::TMap.__lookupGetter__
+@BuiltInFunction: $R::TMap.__lookupSetter__
+@BuiltInFunction: $R::TMap.isPrototypeOf
+@BuiltInFunction: $R::TMap.propertyIsEnumerable
+
+@BuiltInFunction: Set.prototype.has.call
+@BuiltInFunction: Set.prototype.add.call
+@BuiltInFunction: Set.prototype.delete.call
+@BuiltInFunction: Set.prototype.clear.call
+@BuiltInFunction: Set.prototype.entries.call
+@BuiltInFunction: Set.prototype.forEach.call
+@BuiltInFunction: Set.prototype.values.call
+@BuiltInFunction: Set.prototype.keys.call
+@BuiltInFunction: $R::TSet.has
+@BuiltInFunction: $R::TSet.add
+@BuiltInFunction: $R::TSet.delete
+@BuiltInFunction: $R::TSet.clear
+@BuiltInFunction: $R::TSet.entries
+@BuiltInFunction: $R::TSet.forEach
+@BuiltInFunction: $R::TSet.values
+@BuiltInFunction: $R::TSet.keys
+@BuiltInFunction: $R::TSet.toString
+@BuiltInFunction: $R::TSet.valueOf
+@BuiltInFunction: $R::TSet.constructor
+@BuiltInFunction: $R::TSet.__defineGetter__
+@BuiltInFunction: $R::TSet.__defineSetter__
+@BuiltInFunction: $R::TSet.hasOwnProperty
+@BuiltInFunction: $R::TSet.__lookupGetter__
+@BuiltInFunction: $R::TSet.__lookupSetter__
+@BuiltInFunction: $R::TSet.isPrototypeOf
+@BuiltInFunction: $R::TSet.propertyIsEnumerable
+
+@BuiltInFunction: WeakMap.prototype.delete.call
+@BuiltInFunction: WeakMap.prototype.get.call
+@BuiltInFunction: WeakMap.prototype.has.call
+@BuiltInFunction: WeakMap.prototype.set.call
+@BuiltInFunction: WeakSet.prototype.delete.call
+@BuiltInFunction: WeakSet.prototype.has.call
+@BuiltInFunction: WeakSet.prototype.add.call
+@BuiltInFunction: $R::TWeakMap.delete
+@BuiltInFunction: $R::TWeakMap.get
+@BuiltInFunction: $R::TWeakMap.has
+@BuiltInFunction: $R::TWeakMap.set
+@BuiltInFunction: $R::TWeakSet.delete
+@BuiltInFunction: $R::TWeakSet.has
+@BuiltInFunction: $R::TWeakSet.add
+@BuiltInFunction: $R::TWeakSet.toString
+@BuiltInFunction: $R::TWeakSet.valueOf
+@BuiltInFunction: $R::TWeakSet.constructor
+@BuiltInFunction: $R::TWeakSet.__defineGetter__
+@BuiltInFunction: $R::TWeakSet.__defineSetter__
+@BuiltInFunction: $R::TWeakSet.hasOwnProperty
+@BuiltInFunction: $R::TWeakSet.__lookupGetter__
+@BuiltInFunction: $R::TWeakSet.__lookupSetter__
+@BuiltInFunction: $R::TWeakSet.isPrototypeOf
+@BuiltInFunction: $R::TWeakSet.propertyIsEnumerable
+
+@BuiltInFunction: Proxy.revocable
+@BuiltInFunction: $R::TProxy.toString
+@BuiltInFunction: $R::TProxy.valueOf
+@BuiltInFunction: $R::TProxy.constructor
+@BuiltInFunction: $R::TProxy.__defineGetter__
+@BuiltInFunction: $R::TProxy.__defineSetter__
+@BuiltInFunction: $R::TProxy.hasOwnProperty
+@BuiltInFunction: $R::TProxy.__lookupGetter__
+@BuiltInFunction: $R::TProxy.__lookupSetter__
+@BuiltInFunction: $R::TProxy.isPrototypeOf
+@BuiltInFunction: $R::TProxy.propertyIsEnumerable
+
+@BuiltInFunction: SharedArrayBuffer
+@BuiltInFunction: SharedArrayBuffer.prototype.slice.call
+@BuiltInFunction: $R::TSharedArrayBuffer.slice
+@BuiltInFunction: $R::TSharedArrayBuffer.toString
+@BuiltInFunction: $R::TSharedArrayBuffer.valueOf
+@BuiltInFunction: $R::TSharedArrayBuffer.constructor
+@BuiltInFunction: $R::TSharedArrayBuffer.__defineGetter__
+@BuiltInFunction: $R::TSharedArrayBuffer.__defineSetter__
+@BuiltInFunction: $R::TSharedArrayBuffer.hasOwnProperty
+@BuiltInFunction: $R::TSharedArrayBuffer.__lookupGetter__
+@BuiltInFunction: $R::TSharedArrayBuffer.__lookupSetter__
+@BuiltInFunction: $R::TSharedArrayBuffer.isPrototypeOf
+@BuiltInFunction: $R::TSharedArrayBuffer.propertyIsEnumerable
+
+#@BuiltInFunction:BigInt.asUintN
+#@BuiltInFunction:BigInt.asIntN
+#@BuiltInFunction:BigInt.prototype.toLocaleString
+#@BuiltInFunction:BigInt.prototype.toString
+#@BuiltInFunction:BigInt.prototype.valueOf
+
+@BuiltInFunction: Reflect.apply
+@BuiltInFunction: Reflect.construct
+@BuiltInFunction: Reflect.defineProperty
+@BuiltInFunction: Reflect.deleteProperty
+@BuiltInFunction: Reflect.get
+@BuiltInFunction: Reflect.getOwnPropertyDescriptor
+@BuiltInFunction: Reflect.getPrototypeOf
+@BuiltInFunction: Reflect.has
+@BuiltInFunction: Reflect.isExtensible
+@BuiltInFunction: Reflect.ownKeys
+@BuiltInFunction: Reflect.preventExtensions
+@BuiltInFunction: Reflect.set
+@BuiltInFunction: Reflect.setPrototypeOf
+@BuiltInFunction: Reflect.toString
+@BuiltInFunction: Reflect.valueOf
+@BuiltInFunction: Reflect.constructor
+@BuiltInFunction: Reflect.__defineGetter__
+@BuiltInFunction: Reflect.__defineSetter__
+@BuiltInFunction: Reflect.hasOwnProperty
+@BuiltInFunction: Reflect.__lookupGetter__
+@BuiltInFunction: Reflect.__lookupSetter__
+@BuiltInFunction: Reflect.isPrototypeOf
+@BuiltInFunction: Reflect.propertyIsEnumerable
+
+#### Proxy Sematic ####
+@IdDeclareStatement: $N::TProxy = new Proxy(@ProxyTarget, @ProxyHandler)
+@ProxyExpr: new Proxy(@ProxyTarget, @ProxyHandler)
+@ProxyTarget: $P
+@ProxyHandler: { @ProxyHandlerFunctions }
+@ProxyHandlerFunctions: $empty 
+@ProxyHandlerFunctions: @ProxyHandlerFunction, @ProxyHandlerFunctions
+
+@ProxyHandlerFunction: get: function${($N:target, $N:propKey, $N:receiver){ @AssignmentStatement return Reflect.get($R:target, $R:propKey, $R:receiver); }$}
+
+@ProxyHandlerFunction: set: function${($N:target, $N:propKey, $N:value, $N:receiver){ @AssignmentStatement return Reflect.set($R:target, $R:propKey, $R:value, $R:receiver) }$}
+
+@ProxyHandlerFunction: has: function${($N:target, $N:propKey){ @AssignmentStatement return Reflect.has($R:target, $R:propKey); }$}
+
+@ProxyHandlerFunction:deleteProperty: function${($N:target, $N:propKey){ @AssignmentStatement return Reflect.deleteProperty($R:target, $R:propKey); }$}
+
+@ProxyHandlerFunction:ownKeys: function${($N:target){ @AssignmentStatement return Reflect.ownKeys($R:target); }$}
+
+@ProxyHandlerFunction:getOwnPropertyDescriptor: function${($N:target, $N:propKey){ @AssignmentStatement return Reflect.getOwnPropertyDescriptor($R:target, $R:propKey); }$}
+
+@ProxyHandlerFunction:defineProperty: function${($N:target, $N:propKey, $N:propDesc){ @AssignmentStatement return Reflect.defineProperty($R:target, $R:propKey, $R:propDesc); }$}
+
+@ProxyHandlerFunction:preventExtensions: function${($N:target){ @AssignmentStatement return Reflect.preventExtensions($R:target); }$}
+
+@ProxyHandlerFunction:getPrototypeOf: function${($N:target){ @AssignmentStatement return Reflect.getPrototypeOf($R:target); }$}
+
+@ProxyHandlerFunction:isExtensible: function${($N:target){ @AssignmentStatement return Reflect.isExtensible($R:target); }$}
+
+@ProxyHandlerFunction:setPrototypeOf: function${($N:target, $N:proto){ @AssignmentStatement return Reflect.setPrototypeOf($R:target, $R:proto); }$}
+
+@ProxyHandlerFunction:apply: function${($N:target, $N:object, $N:args){ @AssignmentStatement return Reflect.apply($R:target, $R:object, $R:args); }$}
+
+@ProxyHandlerFunction:construct: function${($N:target, $N:args){ @AssignmentStatement return Reflect.construct($R:target, $R:args); }$}
+#### Proxy End ####
+
+#### Reflect Sematic ####
+@ReflectFunctionCall: Reflect.apply($R, $R, $...)
+@ReflectFunctionCall: Reflect.construct($R, $...)
+@ReflectFunctionCall: Reflect.defineProperty($R, $R, $R)
+@ReflectFunctionCall: Reflect.defineProperty($R, $R, @ProxyHandler)
+@ReflectFunctionCall: Reflect.deleteProperty($R, $R)
+@ReflectFunctionCall: Reflect.get($R, $R, $R)
+@ReflectFunctionCall: Reflect.getOwnPropertyDescriptor($R, $R)
+@ReflectFunctionCall: Reflect.getPrototypeOf($R)
+@ReflectFunctionCall: Reflect.has($R, $R)
+@ReflectFunctionCall: Reflect.isExtensible($R)
+@ReflectFunctionCall: Reflect.ownKeys($R)
+@ReflectFunctionCall: Reflect.preventExtensions($R)
+@ReflectFunctionCall: Reflect.set($R, $R, $R, $R)
+@ReflectFunctionCall: Reflect.setPrototypeOf($R, $R)
+#### Reflect End ####
+
+#### Promise Sematic ####
+@IdDeclareStatement: $N::TPromise = new Promise(@PromiseFunction)
+
+@PromiseFunction: function${($N:resolve, $N:reject){ @AssignmentStatement; resolve(); }$}
+@PromiseFunction: function${($N:resolve, $N:reject){ @AssignmentStatement; reject(); }$}
+
+#### Promise End ####
+
+@FuncBody: @ReturnStatement
+#@FuncBody: @AssignmentStatement
+@FuncBody: @AssignmentStatement @ReturnStatement
+@FunctionParameters: $empty
+@FunctionParameters: $N
+#@FunctionParameters: $N, $N
+#@FunctionParameters: $N, $N, $N
+#@FunctionParameters: $N, $N, $N, $N
+@FunctionAnonymousExpr: function${(@FunctionParameters){ @FuncBody }$}
+@FunctionArrowExpr: ${(@FunctionParameters) => { @FuncBody }$}
+@FunctionExpr: @FunctionAnonymousExpr
+@FunctionExpr: @FunctionArrowExpr
+$functionName: Object
+@FunctionDecl: function $N::functionName${(@FunctionParameters){ @FuncBody }$}
+@FunctionDecl: $N::functionName = @FunctionExpr
+@FunctionApplyExpression: $R::functionName($...)
+@FunctionApplyExpression: @ReflectFunctionCall
+@FunctionStatement: @FunctionDecl
+@FunctionStatement: try{ $N:fnObj: = new $R::functionName($...); }catch(e){ $R:fnObj: = @BasicValue; };
+
+@ClassMethodDecl: @define_dict_raw_key${(@FunctionParameters){ @FuncBody }$}
+@ClassConstructorDecl: constructor${(@FunctionParameters){ @FuncBody }$}
+@ClassBody: $empty
+@ClassBody: @ClassConstructorDecl
+@ClassBody: @ClassMethodDecl
+#@ClassBody: @ClassConstructorDecl @ClassMethodDecl
+#@ClassBody: @ClassConstructorDecl @ClassMethodDecl @ClassMethodDecl
+$className: Object
+$className: Function
+$className: Array
+$className: Number
+$className: Boolean
+$className: Symbol
+$className: Date
+$className: Promise
+$className: RegExp
+$className: ArrayBuffer
+$className: Uint8Array
+$className: Int8Array
+$className: Uint16Array
+$className: Int16Array
+$className: Uint32Array
+$className: Int32Array
+$className: Float32Array
+$className: Float64Array
+$className: Uint8ClampedArray
+$className: BigUint64Array
+$className: DataView
+$className: Map
+$className: Set
+$className: WeakMap
+$className: WeakSet
+$className: Proxy
+$className: SharedArrayBuffer
+#$className: BigInt
+@ClassExtends: $empty
+@ClassExtends: extends $R::className
+@ClassDeclaretion: class $N::className @ClassExtends ${{ @ClassBody }$}
+@ClassExpr: class @ClassExtends ${{ @ClassBody }$}
+@ClassApplyExpression: new $R::className($...)
+@ClassStatement: @ClassDeclaretion
+@ClassStatement: try{ $N:clsObj: = new $R::className($...); }catch(e){ $R:clsObj: = @BasicValue; };
+@ClassStatement: try{ $N:clsObj: = new $R::className($...); }catch(e){ $R:clsObj: = @define_member_access; };
+
+@BasicValue: this
+@BasicValue: Object
+@BasicValue: Function
+@BasicValue: Array
+@BasicValue: Number
+@BasicValue: Boolean
+@BasicValue: Symbol
+@BasicValue: Date
+@BasicValue: Promise
+@BasicValue: RegExp
+@BasicValue: ArrayBuffer
+@BasicValue: Uint8Array
+@BasicValue: Int8Array
+@BasicValue: Uint16Array
+@BasicValue: Int16Array
+@BasicValue: Uint32Array
+@BasicValue: Int32Array
+@BasicValue: Float32Array
+@BasicValue: Float64Array
+@BasicValue: Uint8ClampedArray
+@BasicValue: BigUint64Array
+@BasicValue: DataView
+@BasicValue: Map
+@BasicValue: Set
+@BasicValue: WeakMap
+@BasicValue: WeakSet
+@BasicValue: Proxy
+@BasicValue: SharedArrayBuffer
+#@BasicValue: BigInt
+@BasicValue:-1
+@BasicValue:0
+@BasicValue:1
+@BasicValue:255
+@BasicValue:256
+@BasicValue:-255
+@BasicValue:-256
+@BasicValue:-1.0
+@BasicValue:0.0
+@BasicValue:1.0
+@BasicValue:255.0
+@BasicValue:256.0
+@BasicValue:-255.0
+@BasicValue:-256.0
+@BasicValue:1.2345e60
+@BasicValue:0.1
+@BasicValue:.2
+@BasicValue:3
+@BasicValue:3.141592653589793
+@BasicValue:6.17651672645e-213
+@BasicValue:5.3049894784e-314
+@BasicValue:1.3
+@BasicValue:4.
+@BasicValue:5.0000000000000000000000
+@BasicValue:2.3023e-320
+@BasicValue:1.2e3
+@BasicValue:1e81
+@BasicValue:1e+81
+@BasicValue:1e-81
+@BasicValue:1e4
+@BasicValue:(-0)
+@BasicValue:(-1)
+@BasicValue:0x99
+#@BasicValue:033
+@BasicValue:3/0
+@BasicValue:-3/0
+@BasicValue:0/0
+#@BasicValue:0x2D413CCC
+#@BasicValue:0x5a827999
+#@BasicValue:0xB504F332
+#@BasicValue:(0x50505050 >> 1)
+#@BasicValue:0x07fffffff
+#@BasicValue:0x080000000
+#@BasicValue:0x080000001
+#@BasicValue:-0x07fffffff
+#@BasicValue:-0x080000000
+#@BasicValue:-0x080000001
+#@BasicValue:0x0ffffffff
+#@BasicValue:0x100000000
+#@BasicValue:0x100000001
+#@BasicValue:-0x0ffffffff
+#@BasicValue:-0x100000000
+#@BasicValue:-0x100000001
+#@BasicValue:-(2**53-2)
+#@BasicValue:-(2**53)
+#@BasicValue:-(2**53+2)
+#@BasicValue:(2**53)-2
+#@BasicValue:(2**53)
+#@BasicValue:(2**53)+2
+@BasicValue:0.000000000000001
+@BasicValue:1.7976931348623157e308
+@BasicValue:new Number(-1)
+@BasicValue:new Number(0)
+@BasicValue:new Number(1)
+@BasicValue:new Number(-0.1)
+@BasicValue:new Number(0.0)
+@BasicValue:new Number(1.0)
+@BasicValue:Number.MAX_VALUE-1
+@BasicValue:Number.MAX_VALUE
+@BasicValue:-Number.MAX_VALUE
+@BasicValue:Number.MAX_VALUE+1
+@BasicValue:Number.MIN_VALUE-1
+@BasicValue:Number.MIN_VALUE
+@BasicValue:-Number.MIN_VALUE
+@BasicValue:Number.MIN_VALUE+1
+@BasicValue:Number.NaN
+@BasicValue:Number.NEGATIVE_INFINITY
+@BasicValue:-Number.NEGATIVE_INFINITY
+@BasicValue:Number.POSITIVE_INFINITY
+@BasicValue:-Number.POSITIVE_INFINITY
+@BasicValue:Number.MAX_SAFE_INTEGER-1
+@BasicValue:Number.MAX_SAFE_INTEGER
+@BasicValue:-Number.MAX_SAFE_INTEGER
+@BasicValue:Number.MAX_SAFE_INTEGER+1
+@BasicValue:Number.MIN_SAFE_INTEGER-1
+@BasicValue:Number.MIN_SAFE_INTEGER
+@BasicValue:-Number.MIN_SAFE_INTEGER
+@BasicValue:Number.MIN_SAFE_INTEGER+1
+@BasicValue:Number.EPSILON-1
+@BasicValue:Number.EPSILON
+@BasicValue:Number.EPSILON+1
+@BasicValue:(@BasicValue + @BasicValue)
+@BasicValue:(@BasicValue * @BasicValue)
+@BasicValue:(@BasicValue / @BasicValue)
+@BasicValue:(@BasicValue % @BasicValue)
+@BasicValue:Infinity
+@BasicValue:NaN
+@BasicValue:null
+@BasicValue:true
+@BasicValue:false
+#@BasicValue:undefined
+@BasicValue:''
+@BasicValue:/./gi
+@BasicValue:/x/
+@BasicValue:/x/g
+@BasicValue:'strValue'
+@BasicValue:this
+@BasicValue:[]
+@BasicValue:{}
+@BasicValue:[{}, []]
+@BasicValue:[1]
+@BasicValue:[[]]
+@BasicValue:[[1]]
+@BasicValue:[,]
+@BasicValue:[,,]
+@BasicValue:[1,,]
+@BasicValue:[0.1]
+@BasicValue:[0.1, 1]
+@BasicValue:[1, 1.0]
+@BasicValue:['strValue', 1, 1.0]
+@BasicValue:[ @BasicValue ]
+@BasicValue:{ 'strValue': @BasicValue }
+@BasicValue:({})
+@BasicValue:({'strValue':1})
+@BasicValue:['strValue']
+@BasicValue:['strValue',,]
+@BasicValue:[,,'strValue']
+@BasicValue:({'strValue':'strValue'})
+@BasicValue:'\u03A0'
+
+#@define_dict_raw_key: 0
+#@define_dict_raw_key: 1
+#@define_dict_raw_key: 2
+#@define_dict_raw_key: 3
+#@define_dict_raw_key: 0.0
+#@define_dict_raw_key: 1.0
+#@define_dict_raw_key: Infinity
+#@define_dict_raw_key: NaN
+#@define_dict_raw_key: null
+#@define_dict_raw_key: true
+#@define_dict_raw_key: false
+#@define_dict_raw_key: undefined
+#@define_dict_raw_key: 255
+#@define_dict_raw_key: 256
+#@define_dict_raw_key: 1.2345e60
+#@define_dict_raw_key: 3.141592653589793
+#@define_dict_raw_key: 6.17651672645e-213
+#@define_dict_raw_key: 5.3049894784e-314
+#@define_dict_raw_key: 2.3023e-320
+#@define_dict_raw_key: 1.2e3
+#@define_dict_raw_key: 1e81
+#@define_dict_raw_key: 1e+81
+#@define_dict_raw_key: 1e-81
+#@define_dict_raw_key: 1e4
+#@define_dict_raw_key: 0x2D413CCC
+#@define_dict_raw_key: 0x5a827999
+#@define_dict_raw_key: 0xB504F332
+#@define_dict_raw_key: 0x07fffffff
+#@define_dict_raw_key: 0x080000000
+#@define_dict_raw_key: 0x080000001
+#@define_dict_raw_key: 0x0ffffffff
+#@define_dict_raw_key: 0x100000000
+#@define_dict_raw_key: 0x100000001
+#@define_dict_raw_key: 0.000000000000001
+#@define_dict_raw_key: 1.7976931348623157e308
+#@define_dict_raw_key: Object
+#@define_dict_raw_key: Function
+#@define_dict_raw_key: Array
+#@define_dict_raw_key: Number
+#@define_dict_raw_key: Boolean
+#@define_dict_raw_key: Symbol
+#@define_dict_raw_key: Date
+#@define_dict_raw_key: Promise
+#@define_dict_raw_key: RegExp
+#@define_dict_raw_key: ArrayBuffer
+#@define_dict_raw_key: Uint8Array
+#@define_dict_raw_key: Int8Array
+#@define_dict_raw_key: Uint16Array
+#@define_dict_raw_key: Int16Array
+#@define_dict_raw_key: Uint32Array
+#@define_dict_raw_key: Int32Array
+#@define_dict_raw_key: Float32Array
+#@define_dict_raw_key: Float64Array
+#@define_dict_raw_key: Uint8ClampedArray
+#@define_dict_raw_key: BigUint64Array
+#@define_dict_raw_key: DataView
+#@define_dict_raw_key: Map
+#@define_dict_raw_key: Set
+#@define_dict_raw_key: WeakMap
+#@define_dict_raw_key: WeakSet
+#@define_dict_raw_key: Proxy
+#@define_dict_raw_key: SharedArrayBuffer
+#@define_dict_raw_key: BigInt
+#
+@define_dict_raw_key: keyFor
+@define_dict_raw_key: getOwnPropertyDescriptors
+@define_dict_raw_key: toExponential
+@define_dict_raw_key: unscopables
+@define_dict_raw_key: bold
+@define_dict_raw_key: strike
+@define_dict_raw_key: setYear
+@define_dict_raw_key: getUTCDay
+@define_dict_raw_key: for
+@define_dict_raw_key: big
+@define_dict_raw_key: defineProperty
+@define_dict_raw_key: getOwnPropertyNames
+@define_dict_raw_key: setMinutes
+@define_dict_raw_key: entries
+@define_dict_raw_key: split
+@define_dict_raw_key: isSafeInteger
+@define_dict_raw_key: from
+@define_dict_raw_key: getSeconds
+@define_dict_raw_key: sub
+@define_dict_raw_key: getUint32
+@define_dict_raw_key: UTC
+@define_dict_raw_key: stackTraceLimit
+@define_dict_raw_key: constructor
+@define_dict_raw_key: hasOwnProperty
+@define_dict_raw_key: species
+@define_dict_raw_key: dotAll
+@define_dict_raw_key: catch
+@define_dict_raw_key: isView
+@define_dict_raw_key: toString
+@define_dict_raw_key: toISOString
+@define_dict_raw_key: setSeconds
+@define_dict_raw_key: some
+@define_dict_raw_key: input
+@define_dict_raw_key: getFloat32
+@define_dict_raw_key: toLocaleString
+@define_dict_raw_key: call
+@define_dict_raw_key: setUTCMinutes
+@define_dict_raw_key: reduce
+@define_dict_raw_key: flags
+@define_dict_raw_key: isFinite
+@define_dict_raw_key: propertyIsEnumerable
+@define_dict_raw_key: italics
+@define_dict_raw_key: getOwnPropertySymbols
+@define_dict_raw_key: set
+@define_dict_raw_key: forEach
+@define_dict_raw_key: then
+@define_dict_raw_key: revocable
+@define_dict_raw_key: getHours
+@define_dict_raw_key: getMinutes
+@define_dict_raw_key: ignoreCase
+@define_dict_raw_key: setMonth
+@define_dict_raw_key: asUintN
+@define_dict_raw_key: normalize
+@define_dict_raw_key: getUTCHours
+@define_dict_raw_key: getUTCMinutes
+@define_dict_raw_key: size
+@define_dict_raw_key: MAX_VALUE
+@define_dict_raw_key: name
+@define_dict_raw_key: unicode
+@define_dict_raw_key: bind
+@define_dict_raw_key: hasInstance
+@define_dict_raw_key: toDateString
+@define_dict_raw_key: BYTES_PER_ELEMENT
+@define_dict_raw_key: fontsize
+@define_dict_raw_key: fill
+@define_dict_raw_key: sticky
+@define_dict_raw_key: getUTCDate
+@define_dict_raw_key: blink
+@define_dict_raw_key: defineProperties
+@define_dict_raw_key: setInt8
+@define_dict_raw_key: values
+@define_dict_raw_key: source
+@define_dict_raw_key: fromCodePoint
+@define_dict_raw_key: isNaN
+@define_dict_raw_key: getTime
+@define_dict_raw_key: setUint16
+@define_dict_raw_key: EPSILON
+@define_dict_raw_key: lastMatch
+@define_dict_raw_key: setFloat64
+@define_dict_raw_key: global
+@define_dict_raw_key: copyWithin
+@define_dict_raw_key: lastParen
+@define_dict_raw_key: assign
+@define_dict_raw_key: isExtensible
+@define_dict_raw_key: asIntN
+@define_dict_raw_key: charCodeAt
+@define_dict_raw_key: getInt16
+@define_dict_raw_key: getDate
+@define_dict_raw_key: codePointAt
+@define_dict_raw_key: is
+@define_dict_raw_key: getMilliseconds
+@define_dict_raw_key: localeCompare
+@define_dict_raw_key: getDay
+@define_dict_raw_key: push
+@define_dict_raw_key: getUTCMonth
+@define_dict_raw_key: __proto__
+@define_dict_raw_key: getBigInt64
+@define_dict_raw_key: __defineSetter__
+@define_dict_raw_key: small
+@define_dict_raw_key: finally
+@define_dict_raw_key: compile
+@define_dict_raw_key: NaN
+@define_dict_raw_key: toStringTag
+@define_dict_raw_key: setUint32
+@define_dict_raw_key: lastIndexOf
+@define_dict_raw_key: trimStart
+@define_dict_raw_key: indexOf
+@define_dict_raw_key: toPrecision
+@define_dict_raw_key: trimEnd
+@define_dict_raw_key: reject
+@define_dict_raw_key: toLocaleDateString
+@define_dict_raw_key: setFloat32
+@define_dict_raw_key: freeze
+@define_dict_raw_key: isFrozen
+@define_dict_raw_key: replace
+@define_dict_raw_key: anchor
+@define_dict_raw_key: trimLeft
+@define_dict_raw_key: resolve
+@define_dict_raw_key: exec
+@define_dict_raw_key: setBigUint64
+@define_dict_raw_key: shift
+@define_dict_raw_key: charAt
+@define_dict_raw_key: endsWith
+@define_dict_raw_key: filter
+@define_dict_raw_key: iterator
+@define_dict_raw_key: getPrototypeOf
+@define_dict_raw_key: setDate
+@define_dict_raw_key: __lookupGetter__
+@define_dict_raw_key: concat
+@define_dict_raw_key: includes
+@define_dict_raw_key: MIN_VALUE
+@define_dict_raw_key: reverse
+@define_dict_raw_key: setFullYear
+@define_dict_raw_key: substring
+@define_dict_raw_key: toLocaleTimeString
+@define_dict_raw_key: getUTCMilliseconds
+@define_dict_raw_key: setUTCSeconds
+@define_dict_raw_key: parseInt
+@define_dict_raw_key: apply
+@define_dict_raw_key: getUint8
+@define_dict_raw_key: getInt32
+@define_dict_raw_key: substr
+@define_dict_raw_key: multiline
+@define_dict_raw_key: byteOffset
+@define_dict_raw_key: trim
+@define_dict_raw_key: length
+@define_dict_raw_key: getFloat64
+@define_dict_raw_key: getUTCSeconds
+@define_dict_raw_key: create
+@define_dict_raw_key: isSealed
+@define_dict_raw_key: keys
+@define_dict_raw_key: toGMTString
+@define_dict_raw_key: link
+@define_dict_raw_key: every
+@define_dict_raw_key: match
+@define_dict_raw_key: delete
+@define_dict_raw_key: MAX_SAFE_INTEGER
+@define_dict_raw_key: parse
+@define_dict_raw_key: rightContext
+@define_dict_raw_key: getBigUint64
+@define_dict_raw_key: toJSON
+@define_dict_raw_key: callee
+@define_dict_raw_key: asyncIterator
+@define_dict_raw_key: getYear
+@define_dict_raw_key: getUTCFullYear
+@define_dict_raw_key: setHours
+@define_dict_raw_key: search
+@define_dict_raw_key: getFullYear
+@define_dict_raw_key: MIN_SAFE_INTEGER
+@define_dict_raw_key: test
+@define_dict_raw_key: isPrototypeOf
+@define_dict_raw_key: sort
+@define_dict_raw_key: valueOf
+@define_dict_raw_key: unshift
+@define_dict_raw_key: leftContext
+@define_dict_raw_key: toLocaleLowerCase
+@define_dict_raw_key: setUint8
+@define_dict_raw_key: splice
+@define_dict_raw_key: setInt16
+@define_dict_raw_key: trimRight
+@define_dict_raw_key: message
+@define_dict_raw_key: __defineGetter__
+@define_dict_raw_key: toLowerCase
+@define_dict_raw_key: setUTCMilliseconds
+@define_dict_raw_key: getTimezoneOffset
+@define_dict_raw_key: setBigInt64
+@define_dict_raw_key: fixed
+@define_dict_raw_key: setPrototypeOf
+@define_dict_raw_key: caller
+@define_dict_raw_key: isInteger
+@define_dict_raw_key: setUTCHours
+@define_dict_raw_key: clear
+@define_dict_raw_key: getOwnPropertyDescriptor
+@define_dict_raw_key: padStart
+@define_dict_raw_key: fromCharCode
+@define_dict_raw_key: fontcolor
+@define_dict_raw_key: toTimeString
+@define_dict_raw_key: setUTCFullYear
+@define_dict_raw_key: add
+@define_dict_raw_key: toPrimitive
+@define_dict_raw_key: prototype
+@define_dict_raw_key: of
+@define_dict_raw_key: repeat
+@define_dict_raw_key: isConcatSpreadable
+@define_dict_raw_key: __lookupSetter__
+@define_dict_raw_key: arguments
+@define_dict_raw_key: NEGATIVE_INFINITY
+@define_dict_raw_key: byteLength
+@define_dict_raw_key: find
+@define_dict_raw_key: padEnd
+@define_dict_raw_key: captureStackTrace
+@define_dict_raw_key: sup
+@define_dict_raw_key: setUTCMonth
+@define_dict_raw_key: findIndex
+@define_dict_raw_key: setMilliseconds
+@define_dict_raw_key: race
+@define_dict_raw_key: toFixed
+@define_dict_raw_key: buffer
+@define_dict_raw_key: toLocaleUpperCase
+@define_dict_raw_key: has
+@define_dict_raw_key: get
+@define_dict_raw_key: getUint16
+@define_dict_raw_key: getInt8
+@define_dict_raw_key: map
+@define_dict_raw_key: setInt32
+@define_dict_raw_key: seal
+@define_dict_raw_key: reduceRight
+@define_dict_raw_key: join
+@define_dict_raw_key: startsWith
+@define_dict_raw_key: preventExtensions
+@define_dict_raw_key: setTime
+@define_dict_raw_key: getMonth
+@define_dict_raw_key: isArray
+@define_dict_raw_key: toUpperCase
+@define_dict_raw_key: now
+@define_dict_raw_key: slice
+@define_dict_raw_key: toUTCString
+@define_dict_raw_key: pop
+@define_dict_raw_key: all
+@define_dict_raw_key: raw
+@define_dict_raw_key: POSITIVE_INFINITY
+@define_dict_raw_key: setUTCDate
+@define_dict_raw_key: parseFloat
+#
+@define_dict_raw_key: x
+@define_dict_raw_key: value
+@define_dict_raw_key: writable
+
+@define_dict_key: @define_dict_raw_key
+@define_dict_key: "@define_dict_raw_key"
+@value: @BasicValue
+@value: @BasicValue
+@value: @BasicValue
+@value: @define_dict
+@value: @define_array
+@value: @BuiltInProperty
+@define_dict_body: $empty
+@define_dict_body: @define_dict_key : @value
+@define_dict_body: @define_dict_key : @value, @define_dict_key : @value
+@define_dict_body: @define_dict_key : @value, @define_dict_key : @value, @define_dict_key : @value
+@define_dict_body: @define_dict_key : @value, @define_dict_key : @value, @define_dict_key : @value, @define_dict_body
+@define_dict: { @define_dict_body }
+
+@define_array_body: $empty
+@define_array_body: @value
+@define_array_body: @value, @value
+@define_array_body: @value, @value, @value
+@define_array_body: @value, @value, @value, @define_array_body
+@define_array: [ @define_array_body ]
+
+@key: @define_dict_key
+@define_member_access: $R["@define_dict_raw_key"]
+@define_member_call: $R["@define_dict_raw_key"]($...)
+
+@InitIdExpression: $N = @BasicValue;
+@InitIdExpression: $N = @define_dict;
+@InitIdExpression: $N = @define_array;
+@InitIdExpression2: @IdDeclareStatement;
+@NewIdExpression: try{ $N:nIdinNewIdExpression: = @RightHandSideExpression; }catch(e){ $R:nIdinNewIdExpression: = @BasicValue; }
+
+@ReturnStatement:return $R;
+
+@AssignmentStatement:@AssignmentExpression;
+@AssignmentStatement:@AssignmentExpression;@AssignmentStatement
+
+#@AssignmentExpression:@NewIdExpression
+#@AssignmentExpression:@IdDeclareStatement
+#@AssignmentExpression:$R = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@define_member_access = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInProperty = @RightHandSideExpression
+@AssignmentExpression:@BuiltInFunction = @RightHandSideExpression
+@AssignmentExpression:@BuiltInFunction = @RightHandSideExpression
+@AssignmentExpression:@BuiltInFunction = @RightHandSideExpression
+@AssignmentExpression:@BuiltInFunction = @RightHandSideExpression
+@AssignmentExpression:@BuiltInFunction = @RightHandSideExpression
+@AssignmentExpression:@BuiltInFunction = @RightHandSideExpression
+@AssignmentExpression:@BuiltInFunction = @RightHandSideExpression
+@AssignmentExpression:@BuiltInFunction = @RightHandSideExpression
+@AssignmentExpression:@BuiltInFunction = @RightHandSideExpression
+@AssignmentExpression:@BuiltInFunction = @RightHandSideExpression
+@AssignmentExpression:@FunctionStatement
+@AssignmentExpression:@ClassStatement
+@AssignmentExpression: delete @define_member_access
+@AssignmentExpression: delete @define_member_access
+@AssignmentExpression: delete @define_member_access
+@AssignmentExpression: delete @define_member_access
+@AssignmentExpression: delete @define_member_access
+
+@LeftHandSideExpression: @BuiltInProperty
+@LeftHandSideExpression: @define_member_access
+
+@full_value: @BasicValue
+@full_value: @define_dict
+@full_value: @define_array
+#@full_value: @BuiltInProperty
+
+@RightHandSideExpression: @BasicValue
+@RightHandSideExpression: @define_dict
+@RightHandSideExpression: @define_dict
+@RightHandSideExpression: @define_dict
+@RightHandSideExpression: @define_dict
+@RightHandSideExpression: @define_dict
+@RightHandSideExpression: @define_dict
+@RightHandSideExpression: @define_dict
+@RightHandSideExpression: @define_array
+@RightHandSideExpression: @define_array
+@RightHandSideExpression: @define_array
+@RightHandSideExpression: @define_array
+@RightHandSideExpression: @define_array
+@RightHandSideExpression: @define_array
+@RightHandSideExpression: @define_array
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInFunction($...)
+@RightHandSideExpression: @BuiltInProperty
+@RightHandSideExpression: @BuiltInProperty
+@RightHandSideExpression: @BuiltInProperty
+@RightHandSideExpression: @BuiltInProperty
+@RightHandSideExpression: @BuiltInProperty
+@RightHandSideExpression: @BuiltInProperty
+@RightHandSideExpression: @BuiltInProperty
+@RightHandSideExpression: @FunctionExpr
+@RightHandSideExpression: @ClassExpr
+@RightHandSideExpression: @ProxyExpr
+@RightHandSideExpression: @ClassApplyExpression
+@RightHandSideExpression: @FunctionApplyExpression
+@RightHandSideExpression: @ReflectFunctionCall
+@RightHandSideExpression: @ReflectFunctionCall
+@RightHandSideExpression: @ReflectFunctionCall
+@RightHandSideExpression: @ReflectFunctionCall
+@RightHandSideExpression: @ReflectFunctionCall
+@RightHandSideExpression: @ReflectFunctionCall
+@RightHandSideExpression: @ReflectFunctionCall
+@RightHandSideExpression: $R
+@RightHandSideExpression: @define_member_access
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+@RightHandSideExpression: @define_member_call
+
+
+@ParameterExpression: $R
+@ParameterExpression: @BasicValue
+@ParameterExpression: @define_dict
+@ParameterExpression: @define_array
+@ParameterExpression: @member_index_value
+@ParameterExpression: @define_member_access
+@ParameterExpression: @BuiltInProperty
+@ParameterExpression: @FunctionExpr
+@ParameterExpression: @ClassExpr
+@ParameterExpression: @ProxyExpr
+ 
+@NoID_member_setup_value: NoID["@define_dict_raw_key"] = @BasicValue
+@NoID_member_setup_value: NoID["@define_dict_raw_key"] = @define_dict
+@NoID_member_setup_value: NoID["@define_dict_raw_key"] = @define_array
+
+@NoID_member_setup_function: NoID["@define_dict_raw_key"]=@BuiltInFunction
+
+@NoID_member_setup: @NoID_member_setup_value
+@NoID_member_setup: @NoID_member_setup_function
+@NoID_member_setup: @NoID_member_setup_function
+@NoID_member_setup: @NoID_member_setup_function
+@NoID_member_setup: @NoID_member_setup_function
+@NoID_member_setup: @NoID_member_setup_function
+@NoID_member_setup: @NoID_member_setup_function
+@NoID_member_setup: @NoID_member_setup_function
+@NoID_member_setup: @NoID_member_setup_function
+@NoID_member_setup: @NoID_member_setup_function
+
+@NoID_member_call: NoID["@define_dict_raw_key"]($...)
+
+@member_init_type: $N = @BasicValue
+@member_init_type: $N = @define_dict
+@member_init_type: $N = @define_array
+@member_init_type: $N = @FunctionExpr
+@member_init_type: $N = @ClassExpr
+@member_init_type: $N = @ProxyExpr
+
+@member_init_buildin: @BuiltInFunction = @BuiltInFunction
+
+@member_index: 0
+@member_index: 1
+@member_index: 2
+@member_index_value:[]
+@member_index_value:{}
+@member_index_value:[{}, []]
+@member_index_value:[1]
+@member_index_value:[[]]
+@member_index_value:[[1]]
+@member_index_value:[,]
+@member_index_value:[1,,]
+@member_index_value:[0.1]
+@member_index_value:[0.1, 1]
+@member_index_value:[1, 1.0]
+@member_index_value:['x', 1, 1.0]
+@member_index_value:[ @member_index_value ]
+@member_index_value:{ 'x': @member_index_value }
+@member_index_value:['x']
+@member_index_value:['x',,]
+@member_index_value:[,,'x']
+@member_index_value: 'x'
+@member_index_value: /x/ig
+@member_index_value: 1
+@member_index_value: 1.1
+@member_index_value: 2.3023e-320
+@member_index_value: 0
+@member_index_value: 1
+@member_index_value: 2
+@member_index_value: 3
+@member_index_value: 0.0
+@member_index_value: 1.0
+@member_index_value: Infinity
+@member_index_value: NaN
+@member_index_value: null
+@member_index_value: true
+@member_index_value: false
+@member_index_value: undefined
+@member_index_value: 255
+@member_index_value: 256
+@member_index_value: 1.2345e60
+@member_index_value: 3.141592653589793
+@member_index_value: 6.17651672645e-213
+@member_index_value: 5.3049894784e-314
+@member_index_value: 2.3023e-320
+@member_index_value: 1.2e3
+@member_index_value: 1e81
+@member_index_value: 1e+81
+@member_index_value: 1e-81
+@member_index_value: 1e4
+@member_index_value: 0x2D413CCC
+@member_index_value: 0x5a827999
+@member_index_value: 0xB504F332
+@member_index_value: 0x07fffffff
+@member_index_value: 0x080000000
+@member_index_value: 0x080000001
+@member_index_value: 0x0ffffffff
+@member_index_value: 0x100000000
+@member_index_value: 0x100000001
+@member_index_value: 0.000000000000001
+@member_index_value: 1.7976931348623157e308
+@member_index_value: @member_index_value @member_index_value_bin_op @member_index_value
+@member_index_value: @member_index_value @member_index_value_bin_op $R
+@member_index_value: @member_index_value @member_index_value_bin_op $R @member_index_value_bin_op @member_index_value
+@member_index_value: 'x' + $R + 'x'
+@member_index_value_bin_op: +
+@member_index_value_bin_op: -
+@member_index_value_bin_op: *
+@member_index_value_bin_op: /
+@member_index_value_bin_op: %
+@member_index_value_bin_op: >>
+@member_index_value_bin_op: <<
+@member_index_value_bin_op: &&
+@member_index_value_bin_op: ||
+
+@object_keys: "@define_dict_raw_key"
+@object_keys: @member_index
+
+@p1_usage: p1()
+@p1_usage: p1.@define_dict_raw_key($...)
+@p1_usage: p1["@define_dict_raw_key"]($...)
+@p1_usage: delete p1[@object_keys]
+
+@p2_value: @member_index_value
+@p2_value: @BasicValue
+
+@p2_usage: $R[@member_index] = @p2_value
+@p2_usage: p2.append(@p2_value)
+@p2_usage: p2.pop()
+@p2_usage: p2.insert(@member_index, @p2_value)
+@p2_usage: p2.@define_dict_raw_key($...)
+@p2_usage: delete p2[@member_index]
+
+@p3_usage: p3.@define_dict_raw_key($...)
+@p3_usage: p3["@define_dict_raw_key"]($...)
+@p3_usage: delete p3["@define_dict_raw_key"]
+
+@member_access_and_call: $R["@define_dict_raw_key"] = @BasicValue
+@member_access_and_call: $R = $R["@define_dict_raw_key"]
+@member_access_and_call: $R["@define_dict_raw_key"] = $R
+@member_access_and_call: $R["@define_dict_raw_key"] = $R["@define_dict_raw_key"]($...)
+@member_access_and_call: $R["@define_dict_raw_key"] = @BuiltInProperty
+@member_access_and_call: @BuiltInProperty = @BuiltInProperty
+@member_access_and_call: $R.x
+@member_access_and_call: delete $R[@object_keys]
+@member_access_and_call: $R = @FunctionExpr
+@member_access_and_call: $R = @ClassExpr
+@member_access_and_call: $R = @ProxyExpr
+@member_access_and_call: @control_statement
+
+@member_access_and_call: @p1_usage
+@member_access_and_call: @p1_usage
+@member_access_and_call: @p1_usage
+@member_access_and_call: @p1_usage
+@member_access_and_call: @p1_usage
+@member_access_and_call: @p1_usage
+@member_access_and_call: @p1_usage
+@member_access_and_call: @p1_usage
+@member_access_and_call: @p1_usage
+@member_access_and_call: @p1_usage
+
+@member_access_and_call: @p2_usage
+@member_access_and_call: @p2_usage
+@member_access_and_call: @p2_usage
+@member_access_and_call: @p2_usage
+@member_access_and_call: @p2_usage
+@member_access_and_call: @p2_usage
+@member_access_and_call: @p2_usage
+@member_access_and_call: @p2_usage
+@member_access_and_call: @p2_usage
+@member_access_and_call: @p2_usage
+
+@member_access_and_call: @p3_usage
+@member_access_and_call: @p3_usage
+@member_access_and_call: @p3_usage
+@member_access_and_call: @p3_usage
+@member_access_and_call: @p3_usage
+@member_access_and_call: @p3_usage
+@member_access_and_call: @p3_usage
+@member_access_and_call: @p3_usage
+@member_access_and_call: @p3_usage
+@member_access_and_call: @p3_usage
+
+@control_statement: @if_statement
+@control_statement: @switch_statement
+@control_statement: @for_statement
+@control_statement: @while_statement
+
+@condition: $R
+@condition: $R["@define_dict_raw_key"]
+
+@if_statement: if( @condition ){ @member_access_and_call }else{ @member_access_and_call }
+@if_statement: if( @condition ){ @member_access_and_call }else{ @member_access_and_call }
+
+@switch_statement: switch(@condition){case @BasicValue : @member_access_and_call; default: @member_access_and_call }
+@switch_statement: switch(@condition){case @BasicValue : @member_access_and_call;break; default: @member_access_and_call }
+
+@for_statement: loopcount=0;for(let v in $R){loopcount+=1;consloe.log('for statement: '+loopcount);if(loopcount>5){break};@member_access_and_call;}
+
+@while_statement: loopcount=0;do{loopcount+=1;consloe.log('for statement: '+loopcount);if(loopcount>5){break};@member_access_and_call}while(@condition)
+@while_statement: loopcount=0;while(@condition){loopcount+=1;consloe.log('for statement: '+loopcount);if(loopcount>5){break};@member_access_and_call}
+
+@test: $R::TSet.doit()

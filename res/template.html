@@ -1,0 +1,33 @@
+<html>
+<head>
+	<headrefreshmeta></headrefreshmeta>
+<script type="text/javascript">
+var a = [];
+var m = [];
+
+var total = 0
+var total_errors = 0
+
+function TryToCollectGarbage() {
+  try { CollectGarbage(); } catch(err) { }
+  try { window.gc(); } catch(err) { }
+}
+
+function httpGet(theUrl){
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+@js_fuzzer
+
+console.log('finished!');
+try{ httpGet('http://192.168.0.6:8333/report?total='+total+'&total_errors='+total_errors); }catch(e){ }
+//<jslocation>
+</script>
+</head>
+<body>
+@sample_name
+</body>
+</html>
